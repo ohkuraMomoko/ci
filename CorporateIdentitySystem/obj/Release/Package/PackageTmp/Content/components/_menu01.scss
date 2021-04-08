@@ -1,0 +1,87 @@
+@import "../setting/_variables.scss";
+@import "../setting/_mixins.scss";
+
+/*Header: Type01 ===============*/
+.top-bar{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 7;
+}
+.header--type01 {
+    width: 100%;
+    background-color:rgba(#000, 0.8);
+    padding: 24px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-nav {
+        display: flex;
+        align-items: center;
+        &--item {
+            display: inline-block;
+            margin: 0 30px;
+            flex-shrink: 0;
+            >a {
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+                transition: color linear 0.3s;
+                &:hover {
+                    color: $color_holding_primary_hover;
+                }
+            }
+        }
+    }
+    .burger {
+        width: 60px;
+        height: 100%;
+        background-image: url('images/icon-menu-mobile-01.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 31px;
+        cursor: pointer;
+        display: none;
+    }
+    .earth-btn {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 25px;
+        background-image: url('images/buttons/btn-circle-other-earth.svg');
+        cursor: pointer;
+    }
+    .dropdown-menu {
+        background-color: #4d4d4d;
+        a {
+            color: #fff;
+        }
+    }
+    .dropdown-item:focus, .dropdown-item:hover {
+        background-color: #4d4d4d;
+    }
+    .header-link-mob {
+        display: none;
+        position: absolute;
+        left: calc(50% - 17px);
+    }
+}
+
+@include rwd($ipad) {
+    .header--type01 {
+        height: 52px;
+        padding: 5px;
+        .header-link,
+        .header-nav  {
+            display: none;
+        }
+        .burger,
+        .header-link-mob {
+            display: block;
+        }
+    }
+}
+/*Header: Type01 ===============*/

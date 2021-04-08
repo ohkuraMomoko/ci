@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Layout";
+}
+@section scripts {
+    <script>
+        $(".demo-item--layout").addClass("active");
+    </script>
+}
+<div class="main-containter">
+    <p class="main-title">@ViewBag.Title</p>
+    <div class="block"> 
+        <div class="block-type">
+            <p class="block-type--title">Header</p>
+            <div class="mb-3">
+                <div class="col-title">
+                    Type 01
+                    <a href="@Url.Content("~/home/header_demo1")" target="_blank" class="float-right mb-2 btn-holding-primary"><span>DEMO</span></a>
+                </div>
+                <img src="@Url.Content("~/Content/demo-img/header1.PNG")" alt="">
+            </div>
+            <div class="mb-3">
+                <div class="col-title">
+                    Type 02
+                    <a href="@Url.Content("~/home/header_demo2")" target="_blank" class="float-right mb-2 btn-holding-primary"><span>DEMO</span></a>
+                </div>
+                <img src="@Url.Content("~/Content/demo-img/header2.PNG")" alt="">
+            </div>
+            <div class="mb-3">
+                <div class="col-title">
+                    Type 03
+                    <a href="@Url.Content("~/home/header_demo3")" target="_blank" class="float-right mb-2 btn-holding-primary"><span>DEMO</span></a>
+                </div>
+                <img src="@Url.Content("~/Content/demo-img/header3.PNG")" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="block-type">
+            <p class="block-type--title">Footer</p>
+            <div class="col-title">
+                Type 01 
+                <a href="@Url.Content("~/home/footer_demo1")" target="_blank" class="float-right mb-2 btn-holding-primary"><span>DEMO</span></a>
+            </div>
+            <img src="@Url.Content("~/Content/demo-img/footer.PNG")" alt="">
+        </div>
+    </div>
+</div>
+

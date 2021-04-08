@@ -1,0 +1,464 @@
+﻿
+@{
+    ViewBag.Title = "CI_Forms";
+}
+
+<div class="main-containter">
+	<p class="main-title">@ViewBag.Title</p>
+	<div class="block">
+        <p class="block-type--title">According</p>
+        <div class="row w-75">
+            <div class="col-6">
+                <div class="accordion accordion--type1" id="accordionType1">
+                    <div class="accordion-item">
+                        <div class="accordion-item--header" id="h1" data-toggle="collapse" data-target="#c1" aria-expanded="true" aria-controls="c1">
+                            項目一
+                        </div>
+                        <div id="c1" class="collapse show" aria-labelledby="h1" data-parent="#accordionType1">
+                            <div class="collapse--content">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consequatur.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item--header" id="h2" data-toggle="collapse" data-target="#c2" aria-expanded="false" aria-controls="c2">
+                            項目二
+                        </div>
+                        <div id="c2" class="collapse" data-toggle="collapse" data-target="#h2" data-parent="#accordionType1">
+                            <div class="collapse--content">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item--header" id="h3" data-toggle="collapse" data-target="#c3" aria-expanded="false" aria-controls="c3">
+                            項目三
+                        </div>
+                        <div id="c3" class="collapse" data-toggle="collapse" data-target="#h3" data-parent="#accordionType1">
+                            <div class="collapse--content">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="accordion accordion--type2" id="accordionType2">
+                    <div class="accordion-item">
+                        <div class="accordion-item--header" id="h21" data-toggle="collapse" data-target="#c21" aria-expanded="true" aria-controls="c21">
+                            項目一
+                        </div>
+                        <div id="c21" class="collapse show" aria-labelledby="h21" data-parent="#accordionType2">
+                            <div class="collapse--content">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consequatur.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item--header" id="h22" data-toggle="collapse" data-target="#c22" aria-expanded="false" aria-controls="c22">
+                            項目二
+                        </div>
+                        <div id="c22" class="collapse" data-toggle="collapse" data-target="#h22" data-parent="#accordionType2">
+                            <div class="collapse--content">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item--header" id="h23" data-toggle="collapse" data-target="#c23" aria-expanded="false" aria-controls="c23">
+                            項目三
+                        </div>
+                        <div id="c23" class="collapse" data-toggle="collapse" data-target="#h23" data-parent="#accordionType2">
+                            <div class="collapse--content">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <p class="block-type--title">Dropdown list</p>
+        <br>
+        <div class="row w-75">
+            <div class="col">
+                <div class="col-title mb-1">Dropdown Type 1</div>
+                <div class="dropdown dropdown--1">
+                    <button class="dropdown-btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        dropdown menu options
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <button class="dropdown-item" type="button">Option 1</button>
+                        <button class="dropdown-item" type="button">Option 2</button>
+                        <button class="dropdown-item" type="button">Option 3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dropdown dropdown--2">
+                    <div class="col-title mb-1">Dropdown Type 2</div>
+                    <button class="dropdown-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        dropdown menu options
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Option 1</button>
+                        <button class="dropdown-item" type="button">Option 2</button>
+                        <button class="dropdown-item" type="button">Option 3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row w-75 mt-5">
+            <div class="col">
+                <div class="dropdown dropdown--3">
+                    <div class="col-title mb-1">Dropdown Type 3</div>
+                    <button class="dropdown-btn" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        dropdown menu options
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                        <button class="dropdown-item" type="button">Option 1</button>
+                        <button class="dropdown-item" type="button">Option 2</button>
+                        <button class="dropdown-item" type="button">Option 3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dropdown dropdown--4">
+                    <div class="col-title mb-1">Dropdown Type 4</div>
+                    <button class="dropdown-btn" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        dropdown menu options
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                        <button class="dropdown-item" type="button">Option 1</button>
+                        <button class="dropdown-item" type="button">Option 2</button>
+                        <button class="dropdown-item" type="button">Option 3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row w-72 mt-5">
+            <div class="col">
+                <div class="dropdown dropdown--5">
+                    <div class="col-title mb-1">Dropdown Type 5</div>
+                    <button class="dropdown-btn" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        <span class="option-selected">2</span>
+                        <span class="dropdown-text">MultiSelection menu options</span>
+                    </button>
+                    <div class="dropdown-menu multi" aria-labelledby="dropdownMenu5">
+                        <button class="dropdown-item">
+                            <div class="checkboxitem black">
+                                <input id="checkboxAll" type="checkbox" class="selectall"   /> 
+                                <label for="checkboxAll">
+                                    <span class="select-text"> Select</span>
+                                    All
+                                </label>
+                            </div>
+                        </button>
+                        <button class="dropdown-item">
+                            <div class="checkboxitem black">
+                                <input id="checkbox1" name='options[]' type="checkbox" class="option justone" value='Option 1 ' /> 
+                                <label for="checkbox1">Option 1</label>
+                            </div>
+                        </button>
+                        <button class="dropdown-item">
+                            <div class="checkboxitem black">
+                                <input id="checkbox2" name='options[]' type="checkbox" class="option justone" value='Option 2 ' /> 
+                                <label for="checkbox2">Option 2</label>
+                            </div>
+                        </button>
+                        <button class="dropdown-item">
+                            <div class="checkboxitem black">
+                                <input id="checkbox3" name='options[]' type="checkbox" class="option justone" value='Option 3 ' /> 
+                                <label for="checkbox3">Option 3</label>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <p class="block-type--title">Form</p>
+        <br>
+        <div class="row">
+            <div class="col">
+                <form action="" >
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1">Text</label>
+                        <input type="text" class="form-control required" id="aaa" placeholder="請輸入" required>
+                        <p class="required-info">This is required field</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <textarea class="form-control textarea" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <form action="" >
+                    <br>
+                    <div class="form-group"> 
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group"> 
+                        <input type="text" class="form-control error" id="eee" placeholder="請輸入">
+                        <p class="error-info">格式錯誤</p>
+                    </div> 
+                    <br>
+                    <div class="form-group"> 
+                        <input type="text" class="form-control success" id="success" value="success效果展示"> 
+                    </div> 
+                    <div class="form-group"> 
+                        <input type="text" class="form-control disabled" id="disabled" value="disabled效果展示" disabled> 
+                    </div> 
+                    <div class="form-group"> 
+                        <input type="text" class="form-control hover" id="hover" value="hover效果展示" > 
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <p class="block-type--title">Check box</p>
+        <div class="checkboxitem">
+            <input type="checkbox" name="checkbox" id="checkbox_1" value="checkbox_1" checked>
+            <label for="checkbox_1">選擇以下條件</label>
+        </div>
+        <div class="checkboxitem">
+            <input type="checkbox" name="checkbox" id="checkbox_2" value="checkbox_2">
+            <label for="checkbox_2">選擇以下條件</label>
+        </div>
+        <div class="checkboxitem">
+            <input type="checkbox" name="checkbox" id="checkbox_3" value="checkbox_3" disabled>
+            <label for="checkbox_3">選擇以下條件</label>
+        </div>
+    </div>
+    <div class="block">
+        <p class="block-type--title">Breadcrumb</p>
+        <div class="col-title mt-1 mb-1">Breadcrumb Type 1</div>
+        <div class="breadcrumb-container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" itemid="#" href="/Home/">
+                            <span itemprop="name">首頁</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" itemid="#" href="/Join/">
+                            <span itemprop="name">投資專案</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item">
+                            <span itemprop="name">獲利試算</span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
+                </ol>
+            </nav>
+        </div> 
+        <div class="col-title mt-1 mb-1">Breadcrumb Type 2</div>
+        <div class="breadcrumb-container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" itemid="#" href="/Home/">
+                            <span itemprop="name">首頁</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" itemid="#" href="#" id="breadcrumb1"  role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"> 
+                            <span itemprop="name">...</span>
+                        </a>
+                        <div class="dropdown-menu breadcrumb-menu" aria-labelledby="breadcrumb1">
+                            <a class="dropdown-item" href="#">breadcrumb 1</a>
+                            <a class="dropdown-item" href="#">breadcrumb 2</a>
+                            <a class="dropdown-item" href="#">breadcrumb 3</a>
+                        </div>
+                        <meta itemprop="position" content="2">
+                    </li> 
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item">
+                            <span itemprop="name">獲利試算</span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
+                </ol>
+            </nav> 
+        </div> 
+    </div>
+    <div class="block">
+        <p class="block-type--title">Form menu</p>
+        <div class="w-50" style="max-width: 500px;">
+            <div class="search-containter mb-3"> 
+                <input type="text" class="form-control search" id="search" placeholder="投資人下載專區">
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="dropdown dropdown--1 large">
+                    <button class="dropdown-btn" type="button" id="d1" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        下載主題
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="d1" style="">
+                        <button class="dropdown-item" type="button">Option 1</button>
+                        <button class="dropdown-item" type="button">Option 2</button>
+                        <button class="dropdown-item" type="button">Option 3</button>
+                    </div>
+                </div>
+                <div class="dropdown dropdown--1 large">
+                    <button class="dropdown-btn" type="button" id="d2" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        下載主旨
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="d2" style="">
+                        <button class="dropdown-item" type="button">Option 1</button>
+                        <button class="dropdown-item" type="button">Option 2</button>
+                        <button class="dropdown-item" type="button">Option 3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <span>提供投資人更多資訊。</span>
+                <button class="btn-holding-primary"><span>下載</span></button>
+            </div>
+        </div> 
+    </div>
+    <div class="block">
+        <p class="block-type--title">Data table</p>
+        <div class="datatable-containter">
+            <div class="filter">
+                <input type="text" name="filter" id="filter" class="filter-input flex-grow1" placeholder="Filter table">
+                <div class="add-containter">
+                    <button type="submit" class="add-btn" id="addone"  role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Add new</button>
+                    <div class="dropdown-menu add-menu" aria-labelledby="addone">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="datatable">
+                <div class="datatable-item">
+                    <div class="datatable-item--td has-checkbox td-10">
+                        <div class="checkboxitem">
+                            <input type="checkbox" name="checkbox" id="demo1" value="demo1" checked>
+                            <label for="demo1">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="datatable-item--td td-20 text-center">
+                        Online
+                    </div>
+                    <div class="datatable-item--td td-70 pl-1 pr-2">
+                        Cosmo: prod shared ares-managed-features-provider-heavy..
+                    </div>
+                </div>
+                <div class="datatable-item">
+                    <div class="datatable-item--td has-checkbox td-10">
+                        <div class="checkboxitem">
+                            <input type="checkbox" name="checkbox" id="demo2" value="demo2" checked>
+                            <label for="demo2">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="datatable-item--td td-20 text-center">
+                        Online
+                    </div>
+                    <div class="datatable-item--td td-70 pl-1 pr-2">
+                        Cosmo: prod shared ares-managed-features-provider-heavy..
+                    </div>
+                </div>
+                <div class="datatable-item">
+                    <div class="datatable-item--td has-checkbox td-10">
+                        <div class="checkboxitem">
+                            <input type="checkbox" name="checkbox" id="demo3" value="demo3"  >
+                            <label for="demo3">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="datatable-item--td td-20 text-center">
+                        Online
+                    </div>
+                    <div class="datatable-item--td td-70 pl-1 pr-2">
+                        Cosmo: prod shared ares-managed-features-provider-heavy..
+                    </div>
+                </div>
+                <div class="datatable-item">
+                    <div class="datatable-item--td has-checkbox td-10">
+                        <div class="checkboxitem">
+                            <input type="checkbox" name="checkbox" id="demo4" value="demo4"  >
+                            <label for="demo4">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="datatable-item--td td-20 text-center">
+                        Online
+                    </div>
+                    <div class="datatable-item--td td-70 pl-1 pr-2">
+                        Cosmo: prod shared ares-managed-features-provider-heavy.. Cosmo: prod shared ares-managed-features-provider-heavy.. Cosmo: prod shared ares-managed-features-provider-heavy..
+                    </div>
+                </div>
+                <div class="datatable-item disabled">
+                    <div class="datatable-item--td has-checkbox td-10">
+                        <div class="checkboxitem">
+                            <input type="checkbox" name="checkbox" id="demo5" value="demo5"  >
+                            <label for="demo5">&nbsp;</label>
+                        </div>
+                    </div>
+                    <div class="datatable-item--td td-20 text-center">
+                        Disable
+                    </div>
+                    <div class="datatable-item--td td-70 pl-1 pr-2">
+                        Cosmo: prod shared ares-managed-features-provider-heavy..
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(function(){
+            $(".demo-item--forms").addClass("active");
+
+            $(".option-selected").fadeOut();
+            $(".dropdown-menu.multi").on("click",function(e){
+                e.stopPropagation();
+            });
+            
+            $('.selectall').click(function() {
+                if ($(this).is(':checked')) {
+                    $('.option').prop('checked', true);
+                    var total = $('input[name="options[]"]:checked').length;
+                    $(".option-selected").fadeIn(function(){
+                        $(this).html(total);
+                    });
+                } else {
+                    $('.option').prop('checked', false);
+                    $(".option-selected").fadeOut();
+                }
+            });
+
+            $("input[type='checkbox'].justone").change(function(){
+                var a = $("input[type='checkbox'].justone");
+                if(a.length == a.filter(":checked").length){
+                    $('.selectall').prop('checked', true);
+                }
+                else {
+                    $('.selectall').prop('checked', false);
+                }
+                var total = $('input[name="options[]"]:checked').length;
+                if(total === 0) {
+                    $(".option-selected").fadeOut();
+                }else {
+                    $(".option-selected").html(total);
+                    $(".option-selected").fadeIn();
+                } 
+            });
+        })
+    </script>
+}

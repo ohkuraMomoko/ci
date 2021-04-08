@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Tab";
+}
+
+<div class="main-containter">
+    <p class="main-title">@ViewBag.Title</p>
+    <div class="block">
+        <div class="block-type">
+            <p class="block-type--title">Tab</p>
+            <div class="col-title">
+                Type 01 
+                <a href="@Url.Content("~/home/tab1_demo")" target="_blank" class="float-right mb-2 btn-holding-primary"><span>DEMO</span></a>
+            </div>
+            <img src="@Url.Content("~/Content/demo-img/tab1.PNG")" alt="">
+            <img src="@Url.Content("~/Content/demo-img/tab1_m.PNG")" alt="">
+        </div>
+    </div>
+    <div class="block">
+        <div class="block-type">
+            <p class="block-type--title">Tab</p>
+            <div class="col-title">
+                Type 02 
+                <a href="@Url.Content("~/home/tab2_demo")" target="_blank" class="float-right mb-2 btn-holding-primary"><span>DEMO</span></a>
+            </div>
+            <img src="@Url.Content("~/Content/demo-img/tab2.PNG")" alt="">
+            <img src="@Url.Content("~/Content/demo-img/tab2_m.PNG")" alt="">
+        </div>
+    </div>
+</div>
+
+@section scripts {
+<script src="~/Scripts/slick.min.js"></script>
+<script>
+    $(function(){
+        $(".demo-item--tabs").addClass("active");
+    });
+</script>
+}

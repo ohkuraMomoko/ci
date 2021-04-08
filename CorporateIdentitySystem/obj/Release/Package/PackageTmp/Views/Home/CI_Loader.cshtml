@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "CI_Loader";
+}
+
+@section scripts {
+    <script>
+        $(".demo-item--loader").addClass("active");
+    </script>
+}
+<div class="main-containter">
+	<p class="main-title">@ViewBag.Title</p>
+	<div class="block">
+		<p class="block--text">
+			範例: 
+		</p>
+		<figure class="highlight">
+			<pre>
+                <code class="language-html" data-lang="html">
+                    &lt;div class="loader-type01"&gt;
+                        &lt;img src="@Url.Content("~/Content/images/loader/loader-type01.svg")" alt="" class="loader--icon"&gt;
+                        &lt;span class="loader--text"&gt;Loading...&lt;/span&gt;
+                    &lt;/div&gt;
+				</code>
+			</pre>
+		</figure>
+		<div class="mb-3 w-50">
+			<div class="col-title">
+				Element
+				<div class="row">
+                    <div class="col-4">
+                        <div class="loader-type01">
+                            <img src="@Url.Content("~/Content/images/loader/loader-type01.svg")" alt="" class="loader--icon">
+                            <span class="loader--text">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="loader-type02">
+                            <img src="@Url.Content("~/Content/images/loader/loader-type02.svg")"alt="" class="loader--icon">
+                            <span class="loader--text">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="loader-type03">
+                            <img src="@Url.Content("~/Content/images/loader/loader-type03.svg")" alt="" class="loader--icon">
+                            <span class="loader--text">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="loader-type04">
+                            <img src="@Url.Content("~/Content/images/loader/loader-type04.svg")" alt="" class="loader--icon">
+                            <span class="loader--text">Sending invite...</span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="loader-type05">
+                            <img src="@Url.Content("~/Content/images/loader/loader-type05.svg")" alt="" class="loader--icon">
+                            <span class="loader--text">User invited!</span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="loader-type06">
+                            <img src="@Url.Content("~/Content/images/loader/loader-type06.svg")" alt="" class="loader--icon">
+                            <span class="loader--text">User not found</span>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+			
+    </div>
+</div>
+

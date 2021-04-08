@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Header_Demo1</title>
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="top-bar">
+        <header id="headerEnterprise" class="header--type01">
+            <a href="@Url.Content("~/enterprise/home/index")" class="header-link" >
+                <img src="@Url.Content("~/Content/images/logo-white.svg")" alt="中租迪和 Chailease Finance">
+            </a>
+            <ul class="header-nav">
+                <li class="header-nav--item">
+                    <a href="#">關於中租</a>
+                </li>
+                <li class="header-nav--item">
+                    <a href="#">公司治理</a>
+                </li>
+                <li class="header-nav--item">
+                    <a href="#">企業社會責任</a>
+                </li>
+                <li class="header-nav--item">
+                    <a href="#">投資人專區</a>
+                </li>
+                <div class="earth-btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="@Url.Content("~/en-US/home/index")">ENGLISH</a>
+                    <a class="dropdown-item" href="@Url.Content("~/id-ID/home/index")">INDONESIA</a>
+                </div>
+            </ul>
+            <div id="burger" class="burger"></div>
+            <a href="#" class="header-link-mob" >
+                <img src="@Url.Content("~/Content/images/icon-logo-mobile.svg")" alt="PT Chailease Indonesia Finance">
+            </a>
+        </header>
+    </div>
+</body>
+</html>

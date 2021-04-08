@@ -1,0 +1,19 @@
+@import "../setting/_variables.scss";
+@import "../setting/_reset.scss";
+@import "../setting/_mixins.scss";
+
+.pagination {
+    justify-content: center;
+}
+.page-item {
+    .page-link {
+        color: $colorText;
+        border: 3px solid transparent;
+    }
+}
+.page-item.active .page-link,
+.page-link:hover {
+    background-color: transparent;
+    color: $colorText;
+    border-color: $color_holding_primary_default;
+}

@@ -1,0 +1,261 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tab1_Demo</title>
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="service-tab">
+        <div class="tab-item active" data-service="0">汽車融資</div>
+        <div class="tab-item" data-service="1">遊覽車融資</div>
+        <div class="tab-item" data-service="2">貨車融資</div>
+        <div class="tab-item" data-service="3">機車融資</div>
+    </div>
+    <div class="mobile-service-select">
+        <select name="mobileService" id="mobileService">
+            <option value="0" selected>汽車融資</option>
+            <option value="1">遊覽車融資</option>
+            <option value="2">貨車融資</option>
+            <option value="3">機車融資</option>
+        </select>
+    </div>
+    <div id="serviceBox" class="service-box">
+        <div class="service-item">
+            <div class="top-box">
+                <div class="intro">
+                    <p class="intro--subtitle">申請流程介紹</p>
+                    <p class="intro--title">車輛融資分期，<br>簡單 3 步驟完成。</p>
+                    <div class="mobile">車輛融資分期，簡單 3 步驟完成。</div>
+                </div>
+                <div class="step-containter">
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-1.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">填寫申請</p>
+                            <p class="step--desc">每台車輛需收取動保設定費。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-2.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">專人服務</p>
+                            <p class="step--desc">準備第二證件，健保卡或是駕照擇一</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-3.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">立即撥款</p>
+                            <p class="step--desc">相關文件以實際需求為主。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box">
+                <p class="form-title">車輛融資申請 </p>
+                <div class="form-containter">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="center join-input">
+                                <input type="text" name="name1" id="name1" placeholder="申請人姓名">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="center join-input">
+                                <input type="tel" name="tel1" id="tel1" placeholder="行動電話">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <p class="form-desc">線上專員專案服務，一路陪伴最快24小時內撥款到位。</p>
+                        <div class="btn-vehicle-primary form-btn" data-toggle="modal" data-target="#carModalCenter"><span>立即申請</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="top-box">
+                <div class="intro">
+                    <p class="intro--subtitle">申請流程介紹</p>
+                    <p class="intro--title">車輛融資分期，<br>簡單 3 步驟完成。</p>
+                    <div class="mobile">車輛融資分期，簡單 3 步驟完成。</div>
+                </div>
+                <div class="step-containter">
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-1.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">填寫申請</p>
+                            <p class="step--desc">每台車輛需收取動保設定費。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-2.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">專人服務</p>
+                            <p class="step--desc">準備第二證件，健保卡或是駕照擇一</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-3.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">立即撥款</p>
+                            <p class="step--desc">相關文件以實際需求為主。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box">
+                <p class="form-title">車輛融資申請 </p>
+                <div class="form-containter">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="center join-input">
+                                <input type="text" name="name2" id="name2" placeholder="申請人姓名">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="center join-input">
+                                <input type="tel" name="tel2" id="tel2" placeholder="行動電話">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <p class="form-desc">線上專員專案服務，一路陪伴最快24小時內撥款到位。</p>
+                        <div class="btn-vehicle-primary form-btn" data-toggle="modal" data-target="#truckModalCenter"><span>立即申請</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="top-box">
+                <div class="intro">
+                    <p class="intro--subtitle">申請流程介紹</p>
+                    <p class="intro--title">車輛融資分期，<br>簡單 3 步驟完成。</p>
+                    <div class="mobile">車輛融資分期，簡單 3 步驟完成。</div>
+                </div>
+                <div class="step-containter">
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-1.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">填寫申請</p>
+                            <p class="step--desc">每台車輛需收取動保設定費。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-2.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">專人服務</p>
+                            <p class="step--desc">準備第二證件，健保卡或是駕照擇一</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-3.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">立即撥款</p>
+                            <p class="step--desc">相關文件以實際需求為主。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box">
+                <p class="form-title">車輛融資申請 </p>
+                <div class="form-containter">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="center join-input">
+                                <input type="text" name="name3" id="name3" placeholder="申請人姓名">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="center join-input">
+                                <input type="tel" name="tel3" id="tel3" placeholder="行動電話">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <p class="form-desc">線上專員專案服務，一路陪伴最快24小時內撥款到位。</p>
+                        <div class="btn-vehicle-primary form-btn" data-toggle="modal" data-target="#truckModalCenter"><span>立即申請</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="top-box">
+                <div class="intro">
+                    <p class="intro--subtitle"><span>輪你貸申請</span>流程介紹</p>
+                    <p class="intro--title">機車融資-輪你貸<br>首創線上快速核貸。</p>
+                </div>
+                <div class="step-containter">
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-1.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">自選繳款方案</p>
+                            <p class="step--desc">機車免留車<br>自選方案，輕鬆貸輕鬆還。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-2.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">上傳資料即審核</p>
+                            <p class="step--desc">業界首創，免開口線上填單即審核，機車借款更簡單了</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="@Url.Content("~/Content/images/green-3.svg")" alt="" class="step--icon">
+                        <div class="step-box">
+                            <p class="step--text">最快24小時撥款</p>
+                            <p class="step--desc">NT3-15萬快速核貸<br>小額借款超便利</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box">
+                <p class="form-title">中租輪你貸 - 線上小額融資申請 </p>
+                <div class="form-containter">
+                    <p class="form-text">
+                        <span>小額融資申請一圓開店的夢想</span><br>鄭小姐當領薪族多年，正與男友進行咖啡店的創業規畫，原有信用貸款15萬，因為工作薪資三萬偏低，且無其他的財力證明，送了其他銀行，都被駁回。在朋友推薦下，知道中租控股提供機車輛貸款平台，可由線上進行申貸，並且順利核貸9萬。
+                    </p>
+                    <div class="form-footer">
+                        <p class="form-desc">線上專員專案服務，一路陪伴最快24小時內撥款到位。</p>
+                        <a class="btn-vehicle-primary form-btn" target="_blank" href="https://carloan.chailease.com/"><span>立即申請</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/slick.min.js"></script>
+    <script>
+    $(function(){
+        $("#serviceBox").slick({
+            arrows: false,
+            dots: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            swipe: false
+        });
+        $(".service-tab .tab-item").on('click', function () {
+            $(".service-tab .tab-item").removeClass("active");
+            $(this).addClass("active");
+            var target = $(this).data("service");
+            $("#serviceBox").slick('slickGoTo', target);
+        })
+        $("#mobileService").on('change', function () {
+            $("#serviceBox").slick('slickGoTo', $(this).val());
+        });
+        
+
+    });
+    </script>
+</body>
+</html>

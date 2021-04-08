@@ -1,0 +1,116 @@
+﻿@import "_variables.scss";
+@import "_mixins.scss";
+
+a:hover {
+    color: inherit;
+}
+%bg {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+/*=Common Styles--------------------------------*/
+select {
+  /* for Firefox */
+    -moz-appearance: none;
+  /* for Chrome */
+    -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+    display: none;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: #c2c2c2;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #c2c2c2;
+}
+
+::placeholder {
+    color: #c2c2c2;
+}
+
+hr {
+    background-color: #ececec;
+}
+body {
+    font-family: $font-tw;
+    font-size: 16px;
+    color: $colorText;
+}
+body::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+
+body::-webkit-scrollbar {
+	width: 5px;
+	background-color: #d8d8d8;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: #d8d8d8;
+}
+.center {
+    display: block;
+    margin: 0 auto;
+}
+.display-show {
+    display: block !important;
+}
+.display-none {
+    display: none !important;
+}
+/*extend function ---*/
+
+/* color common setting class ---*/
+.text-warring {
+    color: $colorError !important;
+}
+.text-link {
+    color: $color_enterprise_primary_default !important;
+}
+.text-bold {
+    font-weight: bold !important;
+}
+.text-upderline {
+    text-decoration: underline !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-lg {
+    font-size: 1.5em;
+}
+.cursor-none {
+    cursor: initial !important;
+}
+.cursor-need {
+    cursor: pointer;
+}
+/* page common ============*/
+
+main {
+    max-width: $max-w;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+@include rwd($ipad) {
+    main  {
+        padding-top: 46px;
+    }
+}
+
+
+%bg {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+/*=Common Styles--------------------------------*/
+
+

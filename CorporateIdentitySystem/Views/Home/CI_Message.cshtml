@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "CI_Message";
+}
+
+@section scripts {
+    <script>
+        $(".demo-item--message").addClass("active");
+    </script>
+}
+<div class="main-containter">
+	<p class="main-title">@ViewBag.Title</p>
+	<div class="block"> 
+		<div class="mb-3">
+			<div class="col-title">
+				Type 01
+				<a href="@Url.Content("~/home/message_Demo")" target="_blank" class="float-right mb-2 btn-holding-primary"><span>DEMO</span></a>
+			</div>
+			<img src="@Url.Content("~/Content/demo-img/message.PNG")" alt="">
+		</div>
+			
+    </div>
+</div>
+

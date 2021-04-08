@@ -1,0 +1,122 @@
+@import "../setting/_variables.scss";
+@import "../setting/_mixins.scss";
+
+.message {
+    display: flex;
+    margin-bottom: 32px;
+    &--icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &--text {
+        position: relative;
+        .name {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .desc {
+            width: 300px;
+            min-height: 120px;
+            padding: 16px 28px;
+            box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.2);
+        }
+        .info {
+            width: 100px;
+            position: absolute;
+            bottom: 0;
+            &--read {
+                font-size: 13px;
+                color: #4d4d4d;
+            }
+            &--time {
+                font-size: 13px;
+                color: #4d4d4d;
+            }
+        }
+    }
+}
+
+.message.left {
+    .message {
+        &--icon {
+            border: 3px solid #c0a976;
+            margin-right: 11px;
+        }
+        &--text {
+            .desc {
+                background-color: rgba(#c0a976, 0.5);
+                border-radius: 0 26px 26px 26px;
+            }
+            .info {
+                left: 310px;
+            }
+        }
+    }
+}
+.message.right {
+    justify-content: flex-end;
+    .message {
+        &--icon {
+            border: 3px solid #949494;
+            margin-left: 11px;
+        }
+        &--text {
+            .name {
+                text-align: right;
+            }
+            .desc {
+                background-color: rgba(#c0c0c0, 0.5);
+                border-radius: 26px 0 26px 26px;
+            }
+            .info {
+                text-align: right;
+                right: 310px;
+            }
+        }
+    }
+}
+@include rwd($ipad) {
+    .message {
+        margin-bottom: 20px;
+        &--icon {
+            width: 46px;
+            height: 46px;
+        }
+        &--text {
+            .name {
+                margin-bottom: 3px;
+            }
+            .desc {
+                width: 225px;
+                padding: 16px 25px;
+            }
+            .info {
+                width: 100px;
+            }
+        }
+    }
+    .message.left {
+        .message {
+            &--icon {
+                margin-right: 6px;
+            }
+            &--text .info {
+                left: 230px;
+            }
+        }
+    }
+    .message.right {
+        .message {
+            &--icon {
+                margin-left: 6px;
+            }
+            &--text .info {
+                right: 230px;
+            }
+        }
+    }
+}

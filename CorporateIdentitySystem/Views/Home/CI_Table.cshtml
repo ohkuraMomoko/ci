@@ -1,0 +1,154 @@
+﻿@{
+ViewBag.Title = "CI_Table";
+}
+@section header {
+    <link href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet"></link>
+}
+<div class="main-containter">
+    <p class="main-title">@ViewBag.Title</p>
+    <div class="block">
+        <p class="block-type--title">RWD</p>
+        <div class="d-flex justify-content-end ">
+            <div class="search-containter mb-2"> 
+                <input type="text" class="form-control search" id="search" placeholder="投資人下載專區">
+            </div>
+        </div>
+        <div class="table-length top mb-2 d-md-none d-lg-none">
+            <span class="table-length--text mr-1">每頁顯示</span>
+            <div class="table-length--select">
+                <select name="aaa" id="aaa">
+                    <option value="5">5筆</option>
+                </select>
+            </div>
+        </div>
+        <div class="table-containter"> 
+            <div class="table-header">
+                <div class="table-header--item td-10">
+                    <span>申請日期</span>
+                </div>
+                <div class="table-header--item td-20">
+                    <span>OA</span>
+                </div>
+                <div class="table-header--item td-10">
+                    <span>據點</span>
+                </div>
+                <div class="table-header--item td-10">
+                    <span>業務</span>
+                </div>
+                <div class="table-header--item td-20">
+                    <span>契約編號</span>
+                </div>
+                <div class="table-header--item td-10">
+                    <span>客戶名稱</span>
+                </div> 
+                <div class="table-header--item td-10">
+                    <span>審查狀態</span>
+                </div>
+                <div class="table-header--item td-10">
+                    <span>回覆書列印</span>
+                </div>
+            </div>
+            <div class="table-body">
+                <div class="table-row">
+                    <div class="table-row--item td-10">
+                        <span>20190703</span>
+                    </div>
+                    <div class="table-row--item td-20">
+                        <span class="textrow">湧立股份有限公司湧立股份有限公司湧立股份有限公司</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>台北市</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>邱*勛</span>
+                    </div>
+                    <div class="table-row--item td-20">
+                        <span>***07D0055</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>林*英</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>審查中</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <button class="btn-holding-primary table-btn"><span>下載</span></button>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-row--item td-10">
+                        <span>20190703</span>
+                    </div>
+                    <div class="table-row--item td-20">
+                        <span class="textrow">湧立股份有限公司湧立股份有限公司湧立股份有限公司</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>台北市</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>邱*勛</span>
+                    </div>
+                    <div class="table-row--item td-20">
+                        <span>***07D0055</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>林*英</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>審查中</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <button class="btn-holding-primary table-btn"><span>下載</span></button>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-row--item td-10">
+                        <span>20190703</span>
+                    </div>
+                    <div class="table-row--item td-20">
+                        <span class="textrow">湧立股份有限公司湧立股份有限公司湧立股份有限公司</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>台北市</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>邱*勛</span>
+                    </div>
+                    <div class="table-row--item td-20">
+                        <span>***07D0055</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>林*英</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <span>審查中</span>
+                    </div>
+                    <div class="table-row--item td-10">
+                        <button class="btn-holding-primary table-btn"><span>下載</span></button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="table-footer">
+            <div class="table-length">
+                <span class="table-length--text mr-1">每頁顯示</span>
+                <div class="table-length--select">
+                    <select name="aaa" id="aaa">
+                        <option value="5">5筆</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-pagination">
+                <button class="btn-holding-primary table-pagination--button"><span>上一頁</span></button>
+                <div class="table-pagination--select ml-2 mr-2">
+                    <select name="bbb" id="bbb">
+                        <option value="1">1頁</option>
+                    </select>
+                </div>
+                <span class="table-pagination--info mr-2">共1頁(5筆)</span>
+                <button class="btn-holding-primary table-pagination--button"><span>下一頁</span></button>
+            </div>
+        </div>
+    </div> 
+</div>
+

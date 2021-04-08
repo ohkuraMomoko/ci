@@ -1,0 +1,279 @@
+﻿@{ ViewBag.Title = "Buttons"; } 
+@section scripts {
+    <script>
+        $(".demo-item--buttons").addClass("active");
+    </script>
+}
+<div class="main-containter">
+	<p class="main-title">@ViewBag.Title</p>
+	<div class="block">
+		<p class="block--text">
+			UI:
+			<br />網站大致會以控股集團的金色為主色調，服務項目再以不同色調做區分，例如：企金使用藍色調、車輛融資使用綠色調、個人融資服務使用紅色調。
+		</p>
+		<br />
+		<p class="block--text">
+			F2E:
+			<br />狀態使用class來切換，預設不用加上。class包含:.hover、.active、.disabled
+			範例: 一個完整的按鈕結構:
+		</p>
+		<figure class="highlight">
+			<pre>
+                <code class="language-html" data-lang="html">
+					&lt;a href="#" class="btn-holding-primary"&gt;&lt;span&gt;Button&lt;/span&gt;&lt;/a&gt;
+					&lt;button class="btn-holding-primary"&gt;&lt;span&gt;Button&lt;/span&gt;&lt;/button&gt;
+					&lt;div class="btn-holding-primary"&gt;&lt;span&gt;Button&lt;/span&gt;&lt;/div&gt;
+				</code>
+			</pre>
+		</figure>
+		<div class="block-type">
+			<p class="block-type--title">控股集團角色</p>
+			<div class="row">
+				<div class="col-2">
+					<div class="col-title">Primary</div>
+					<a href="#" class="btn-holding-primary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-holding-primary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-holding-primary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-holding-primary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Secondary</div>
+					<a href="#" class="btn-holding-secondary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-holding-secondary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-holding-secondary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-holding-secondary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Tertiary</div>
+					<a href="#" class="btn-holding-tertiary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-holding-tertiary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-holding-tertiary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-holding-tertiary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Ghost</div>
+					<a href="#" class="btn-holding-ghost mb-1"><span>Button</span></a>
+					<a href="#" class="btn-holding-ghost hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-holding-ghost active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-holding-ghost disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Danger</div>
+					<a href="#" class="btn-holding-danger mb-1"><span>Button</span></a>
+					<a href="#" class="btn-holding-danger hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-holding-danger active mb-1"><span>Active</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="block-type">
+			<p class="block-type--title">企業融資服務</p>
+			<div class="row">
+				<div class="col-2">
+					<div class="col-title">Primary</div>
+					<a href="#" class="btn-enterprise-primary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-enterprise-primary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-enterprise-primary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-enterprise-primary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Secondary</div>
+					<a href="#" class="btn-enterprise-secondary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-enterprise-secondary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-enterprise-secondary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-enterprise-secondary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Tertiary</div>
+					<a href="#" class="btn-enterprise-tertiary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-enterprise-tertiary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-enterprise-tertiary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-enterprise-tertiary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Ghost</div>
+					<a href="#" class="btn-enterprise-ghost mb-1"><span>Button</span></a>
+					<a href="#" class="btn-enterprise-ghost hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-enterprise-ghost active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-enterprise-ghost disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Danger</div>
+					<a href="#" class="btn-enterprise-danger mb-1"><span>Button</span></a>
+					<a href="#" class="btn-enterprise-danger hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-enterprise-danger active mb-1"><span>Active</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="block-type">
+			<p class="block-type--title">車輛融資服務</p>
+			<div class="row">
+				<div class="col-2">
+					<div class="col-title">Primary</div>
+					<a href="#" class="btn-vehicle-primary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-vehicle-primary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-vehicle-primary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-vehicle-primary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Secondary</div>
+					<a href="#" class="btn-vehicle-secondary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-vehicle-secondary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-vehicle-secondary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-vehicle-secondary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Tertiary</div>
+					<a href="#" class="btn-vehicle-tertiary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-vehicle-tertiary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-vehicle-tertiary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-vehicle-tertiary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Ghost</div>
+					<a href="#" class="btn-vehicle-ghost mb-1"><span>Button</span></a>
+					<a href="#" class="btn-vehicle-ghost hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-vehicle-ghost active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-vehicle-ghost disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Danger</div>
+					<a href="#" class="btn-vehicle-danger mb-1"><span>Button</span></a>
+					<a href="#" class="btn-vehicle-danger hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-vehicle-danger active mb-1"><span>Active</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="block-type">
+			<p class="block-type--title">個人融資服務</p>
+			<div class="row">
+				<div class="col-2">
+					<div class="col-title">Primary</div>
+					<a href="#" class="btn-persolal-primary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-persolal-primary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-persolal-primary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-persolal-primary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Secondary</div>
+					<a href="#" class="btn-persolal-secondary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-persolal-secondary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-persolal-secondary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-persolal-secondary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Tertiary</div>
+					<a href="#" class="btn-persolal-tertiary mb-1"><span>Button</span></a>
+					<a href="#" class="btn-persolal-tertiary hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-persolal-tertiary active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-persolal-tertiary disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Ghost</div>
+					<a href="#" class="btn-persolal-ghost mb-1"><span>Button</span></a>
+					<a href="#" class="btn-persolal-ghost hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-persolal-ghost active mb-1"><span>Active</span></a>
+					<a href="#" class="btn-persolal-ghost disabled mb-1"><span>Disabled</span></a>
+				</div>
+				<div class="col-2">
+					<div class="col-title">Danger</div>
+					<a href="#" class="btn-persolal-danger mb-1"><span>Button</span></a>
+					<a href="#" class="btn-persolal-danger hover mb-1"><span>Hover</span></a>
+					<a href="#" class="btn-persolal-danger active mb-1"><span>Active</span></a>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="block" >
+        <div class="block-type" style="max-width: 1100px;">
+            <div class="col-title">Default</div>
+			<div class="row">
+                <div class="col-4">
+                    <div class="btn-circle-type01--plus"></div>
+                    <div class="btn-circle-type01--more"></div>
+                    <div class="btn-circle-type01--return"></div>
+                    <div class="btn-circle-type01--search"></div>
+                    <div class="btn-circle-type01--twitter"></div>
+                    <div class="btn-circle-type01--fb"></div>
+                    <div class="btn-circle-type01--ins"></div>
+                    <div class="btn-circle-type01--youtube"></div>
+                </div>
+                <div class="col-4">
+                    <div class="btn-circle-type02--plus"></div>
+                    <div class="btn-circle-type02--more"></div>
+                    <div class="btn-circle-type02--return"></div>
+                    <div class="btn-circle-type02--subtract"></div>
+                    <div class="btn-circle-type02--delete"></div>
+                    <div class="btn-circle-type02--twitter"></div>
+                    <div class="btn-circle-type02--fb"></div>
+                    <div class="btn-circle-type02--ins"></div>
+                    <div class="btn-circle-type02--youtube"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block-type" style="max-width: 1100px;">
+            <div class="col-title">Hover</div>
+			<div class="row">
+                <div class="col-4">
+                    <div class="btn-circle-type01--plus hover"></div>
+                    <div class="btn-circle-type01--more hover"></div>
+                    <div class="btn-circle-type01--return hover"></div>
+                    <div class="btn-circle-type01--search hover"></div>
+                    <div class="btn-circle-type01--twitter hover"></div>
+                    <div class="btn-circle-type01--fb hover"></div>
+                    <div class="btn-circle-type01--ins hover"></div>
+                    <div class="btn-circle-type01--youtube hover"></div>
+                </div>
+                <div class="col-4">
+                    <div class="btn-circle-type02--plus hover"></div>
+                    <div class="btn-circle-type02--more hover"></div>
+                    <div class="btn-circle-type02--return hover"></div>
+                    <div class="btn-circle-type02--subtract hover"></div>
+                    <div class="btn-circle-type02--delete hover"></div>
+                    <div class="btn-circle-type02--twitter hover"></div>
+                    <div class="btn-circle-type02--fb hover"></div>
+                    <div class="btn-circle-type02--ins hover"></div>
+                    <div class="btn-circle-type02--youtube hover"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block-type" style="max-width: 1100px;">
+            <div class="col-title">Active</div>
+			<div class="row">
+                <div class="col-4">
+                    <div class="btn-circle-type01--plus active"></div>
+                    <div class="btn-circle-type01--more active"></div>
+                    <div class="btn-circle-type01--return active"></div>
+                    <div class="btn-circle-type01--search active"></div>
+                    <div class="btn-circle-type01--twitter active"></div>
+                    <div class="btn-circle-type01--fb active"></div>
+                    <div class="btn-circle-type01--ins active"></div>
+                    <div class="btn-circle-type01--youtube active"></div>
+                </div>
+                <div class="col-4">
+                    <div class="btn-circle-type02--plus active"></div>
+                    <div class="btn-circle-type02--more active"></div>
+                    <div class="btn-circle-type02--return active"></div>
+                    <div class="btn-circle-type02--subtract active"></div>
+                    <div class="btn-circle-type02--delete active"></div>
+                    <div class="btn-circle-type02--twitter active"></div>
+                    <div class="btn-circle-type02--fb active"></div>
+                    <div class="btn-circle-type02--ins active"></div>
+                    <div class="btn-circle-type02--youtube active"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block-type" style="max-width: 1100px;">
+            <div class="col-title">Others</div>
+            <div class="btn-circle-other--close"></div>
+            <div class="btn-circle-other--search"></div>
+            <div class="btn-circle-other--menu"></div>
+            <div class="btn-circle-other--earth"></div>
+            <div class="btn-circle-other--prev-1"></div>
+            <div class="btn-circle-other--next-1"></div>
+            <div class="btn-circle-other--prev-2"></div>
+            <div class="btn-circle-other--next-2"></div>
+            <div class="btn-circle-other--prev-3"></div>
+            <div class="btn-circle-other--next-3"></div>
+        </div>
+    </div>
+</div>

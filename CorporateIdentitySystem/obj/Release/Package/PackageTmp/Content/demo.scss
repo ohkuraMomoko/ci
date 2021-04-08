@@ -1,0 +1,143 @@
+/* 僅用於CI展示網站，非ci公版元件設計*/
+/* setting */ 
+@import "setting/_variables.scss";
+@import "setting/_reset.scss"; 
+@import "setting/_mixins.scss"; 
+
+.body-containter {
+    display: flex;
+    .main {
+        flex: 1;
+    }
+    
+}
+.main-containter {
+    padding: 40px 20px;
+    .main-title{
+        font-size: 26px;
+        font-weight: 500;
+        color: #9b9b9b;
+        padding-left: 5%;
+        margin-bottom: 17px;
+    }
+    .block {
+        border-radius: 6px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+        background-color: #ffffff;
+        padding: 37px 32px;
+        margin-bottom: 16px;
+        &--title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        &--text {
+            color: #8b8b8b;
+        }
+        &-type {
+            margin-top: 30px;
+            &:first-child {
+                margin-top: 0;
+            }
+            &--title {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            .col-title {
+                color: #9b9b9b;
+                margin-bottom: 14px;
+            }
+        }
+    }
+}
+@include rwd($ipad) {
+    .main-containter {
+        padding: 0;
+    }
+    .body-containter .main {
+        width: 100%;
+    }
+}
+/* Block: .demo-menu =====*/
+.demo-menu {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #343a40;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.4);
+    background-color: #343a40; 
+    &--title {
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+        line-height: 64px;
+        border-bottom: 1px solid #fff; 
+    }
+    &--content {
+        padding: 22px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .demo-item {
+        width: 100%;
+        border-radius: 6px;
+        transition: all linear 0.3s;
+        >a {
+            display: block;
+            width: 100%;
+            padding-left: 47px;
+            line-height: 36px;
+            color: #fff;
+        }
+        &:hover,
+        &.active {
+            
+            background-color: #bc9e5c;
+        }
+    }
+}
+.burger-demo {
+    position: fixed;
+    right: 0;
+    width: 60px;
+    height: 60px; 
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 50;
+}
+@include rwd($ipad){
+    .demo-menu {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 5;
+        transform: translateX(-100%);
+        transition: all linear 0.3s;
+        &.open {
+            transform: translateX(0%);
+        }
+    }
+    .burger-demo {
+        display: flex;
+    }
+}
+/* Block: .demo-menu =====*/
+
+[class^="btn-circle-type"]  {
+    display: inline-block;
+}
+[class^="btn-circle-other"] {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+[class^='icon-'] {
+    display: inline-block;
+    margin-right: 30px;
+}
+.img-decoration {
+    margin-right: 30px;
+}
+

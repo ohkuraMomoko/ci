@@ -1,0 +1,9 @@
+@import "../setting/_variables.scss";
+@import "../setting/_mixins.scss";
+
+.loader {
+    &--icon {
+        display: inline-block;
+        margin-right: 8px;
+    }
+}

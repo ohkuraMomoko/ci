@@ -1,0 +1,99 @@
+$color: #b89b5b;
+
+.dropdown {
+    width: 248px;
+    .dropdown-btn {
+        width: 100%;
+        line-height: 31px;
+        font-size: 12px;
+        text-align: left;
+        background-color: #f0f0f0;
+        border: 1px solid transparent;
+        border-bottom: 1px solid $color;
+        padding: 0 12px;
+        margin-bottom: 1px;
+        position: relative;
+        cursor: pointer;
+        transition: border linear 0.3s;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 12px;
+            width: 10px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-image: url('images/arrow-g.svg');
+            background-position: 50% 50%;
+            background-size: 100%;
+            transition: transform linear 0.3s;
+        }
+        &[aria-expanded="true"] {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &.large {
+        .dropdown-btn {
+            line-height: 43px;
+            font-size: 16.2px;
+            color: #4d4d4d;
+        }
+    }
+    .option-selected {
+        width: 33px;
+        text-align: center;
+        line-height: 18px;
+        color: #fff;
+        font-size: 12px;
+        background-color: #000;
+        border-radius: 10px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .dropdown-menu {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+    }
+    .dropdown-item {
+        line-height: 31px;
+        font-size: 12px;
+        padding-left: 11px;
+        background-color: #f0f0f0;
+        transition: all linear 0.3s;
+        label {
+            display: block;
+        }
+        &:hover {
+            color: #ffffff;
+            background-color: $color;
+        }
+    }
+}
+.dropdown--2 {
+    .dropdown-btn,
+    .dropdown-item {
+        background-color: #fff;
+    }
+}
+.dropdown--3 {
+    .dropdown-btn {
+        &[aria-expanded="true"] {
+            border-color: $color;
+        }
+    }
+}
+.dropdown--4 {
+    .dropdown-btn,
+    .dropdown-item {
+        background-color: #fff;
+    }
+    .dropdown-btn {
+        &[aria-expanded="true"] {
+            border-color: $color;
+        }
+    }
+}

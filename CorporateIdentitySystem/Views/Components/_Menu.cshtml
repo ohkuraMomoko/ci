@@ -1,0 +1,144 @@
+﻿<div class="top-bar">
+    <nav class="js-nav nav">
+        <ul>
+            <li class="nav-item js-nav-enterprise">
+                <a href="@Url.Content("~/enterprise/home/index")" class="btn-enterprise-primary"><span>企業服務</span></a>
+            </li>
+            <li class="nav-item js-nav-vehicle">
+                <a href="@Url.Content("~/vehicle/home/index")" class="btn-vehicle-primary"><span>車輛融資</span></a>
+            </li>
+            <li class="nav-item js-nav-personal">
+                <a href="@Url.Content("~/personal/home/index")" class="btn-persolal-primary"><span>個人服務</span></a>
+            </li>
+        </ul>
+        <a href="https://www.bizloan-chailease.com.tw/apply" id="headerRequestLink" class="btn-enterprise-primary nav-join" target="_blank"><span>企業資金申請</span></a>
+        <div data-toggle="modal" data-target="#exampleModalCenter" id="headerRequestLinkVehicle" class="btn-vehicle-primary nav-join d-none" ><span>車輛資金申請</span></div>
+    </nav>
+
+    <!-- header分三個: 企業、個人、車輛 -->
+    <header id="headerEnterprise" class="header d-none">
+        <a href="@Url.Content("~/enterprise/home/index")" class="header-link" >
+            <img src="@Url.Content("~/Content/images/logo-black.svg")" alt="中租迪和 Chailease Finance">
+        </a>
+        <ul class="header-nav">
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/enterprise/turnover/index")">成功週轉家</a>
+            </li>
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/enterprise/news/index")">最新訊息公告</a>
+            </li>
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/enterprise/financing/index")">融資快報</a>
+            </li>
+        </ul>
+        <a href="https://www.bizloan-chailease.com.tw/apply" class="btn-enterprise-primary header-join-btn" target="_blank"><span>企業資金申請
+            <img src="@Url.Content("~/Content/images/arrow.svg")" alt=""></span></a>
+    </header>
+    <!-- 個人 -->
+    <header id="headerPersonal" class="header d-none">
+        <a href="@Url.Content("~/personal/home/index")" class="header-link" >
+            <img src="@Url.Content("~/Content/images/logo-black.svg")" alt="中租迪和 Chailease Finance">
+        </a>
+        <ul class="header-nav">
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/personal/turnover/zerocard")">零卡分期</a>
+            </li>
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/personal/turnover/solarenergy")">全民電廠</a>
+            </li>
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/personal/turnover/index")">個人融資</a>
+            </li>
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/personal/news/index")">最新消息公告</a>
+            </li>
+        </ul>
+        <a href="https://carloan.chailease.com/" class="btn-persolal-primary header-join-btn" target="_blank"><span>個人資金申請
+            <img src="@Url.Content("~/Content/images/arrow.svg")" alt=""></span></a>
+    </header>
+    <!-- 車輛 -->
+    <header id="headerVehicle" class="header d-none">
+        <a href="@Url.Content("~/vehicle/home/index")" class="header-link" >
+            <img src="@Url.Content("~/Content/images/logo-black.svg")" alt="中租迪和 Chailease Finance">
+        </a>
+        <ul class="header-nav">
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/vehicle/turnover/moto")">機車融資-輪你貸</a>
+            </li>
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/vehicle/turnover/car")">車輛融資</a>
+            </li>
+            <li class="header-nav--item">
+                <a href="@Url.Content("~/vehicle/turnover/tourbus")">遊覽車融資</a>
+            </li>
+        </ul>
+        <div data-toggle="modal" data-target="#exampleModalCenter" class="btn-vehicle-primary header-join-btn" ><span>車輛資金申請
+            <img src="@Url.Content("~/Content/images/arrow.svg")" alt=""></span></div>
+        <div id="burger" class="burger"></div>
+    </header>
+</div>
+<div class="bottom-bar">
+    <ul>
+        <li class="bottom-bar--item js-nav-enterprise">
+            <a href="@Url.Content("~/enterprise/home/index")">
+                <img src="@Url.Content("~/Content/images/icon-1.svg")" alt="企業服務" class="center img">
+                <p class="title">企業服務</p>
+            </a>
+        </li>
+        <li class="bottom-bar--item js-nav-vehicle">
+            <a href="@Url.Content("~/vehicle/home/index")">
+                <img src="@Url.Content("~/Content/images/icon-2.svg")" alt="車輛融資" class="center img">
+                <p class="title">車輛融資</p>
+            </a>
+        </li>
+        <li class="bottom-bar--item js-nav-personal">
+            <a href="@Url.Content("~/personal/home/index")">
+                <img src="@Url.Content("~/Content/images/icon-3.svg")" alt="個人服務" class="center img">
+                <p class="title">個人服務</p>
+            </a>
+        </li>
+    </ul>
+</div>
+<script>
+    $(function () {       
+        var $pathname = location.pathname.toLowerCase();
+        if($pathname.indexOf('enterprise') >= 0){
+            $('.js-nav-enterprise>a').addClass("active");
+            $("#headerEnterprise").removeClass("d-none");
+        }else if($pathname.indexOf('personal') >= 0){
+            $('.js-nav-personal>a').addClass("active");
+            $("#headerRequestLink>span").text("個人資金申請")
+            $("#headerRequestLink").attr('href',"https://carloan.chailease.com/");
+            $("#headerPersonal").removeClass("d-none");
+        }else {
+            $('.js-nav-vehicle>a').addClass("active");
+            $("#headerVehicle").removeClass("d-none");
+            $("#headerRequestLink").addClass("d-none");
+            $("#headerRequestLinkVehicle").removeClass("d-none");
+        }
+        var isMobile;
+        if ($(window).width() <= 1100) {
+            isMobile = true;
+        }else {
+            isMobile = false
+        }
+        $(window).on('resize', function(){
+            if ($(window).width() <= 1100) {
+                isMobile = true;
+            }else {
+                isMobile = false
+            }
+        });
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop && !isMobile){
+                $(".nav").fadeOut();
+            } else if(st < lastScrollTop && !isMobile) {
+                $(".nav").fadeIn();
+            }
+            lastScrollTop = st;
+        });
+        
+    });
+</script>

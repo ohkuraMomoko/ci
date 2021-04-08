@@ -1,0 +1,267 @@
+@import "../setting/_variables.scss";
+@import "../setting/_mixins.scss";
+
+
+@for $i from 1 through 10 {
+    .td-#{$i*10} {
+        width: ( $i * 10%);
+    }
+}
+
+.flex-grow1{
+    flex-grow: 1;
+}
+
+.filter {
+    display: flex;
+    &-input {
+        line-height: 31px;
+        border: 1px solid $color_holding_primary_default;
+        box-shadow: none !important;
+        outline: transparent !important;
+        padding-left: 2%;
+    }
+    .add-btn {
+        display: block;
+        width: 132px;
+        text-align: center;
+        color: #fff;
+        line-height: 35px;
+        font-size: 12.8px;
+        background-color: #000;
+    }
+    .add-menu {
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        .dropdown-item {
+            border: 1px solid transparent;
+            &:hover {
+                border-color: $color_holding_primary_default
+            }
+        }
+    }
+}
+
+/* Element: table1 =========*/
+.datatable-containter {
+    width: 600px;
+}
+.datatable {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    &-item {
+        padding: 10px 0;
+        border-bottom: solid 1px #c8c8c8;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: background-color linear 0.3s;
+        &:hover {
+            background-color: #e4d8be;
+        }
+        &.disabled {
+            opacity: 0.5;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                cursor: not-allowed;
+                z-index: 3;
+            }
+        }
+        &--td { 
+            word-wrap: break-word;
+            &.has-checkbox {
+                padding-left: 18px;
+                .checkboxitem {
+                    transform: translateY(-8px);
+                    margin-bottom: 0;
+                    label {
+                        margin-bottom: 0;
+                    }
+                }
+                .checkboxitem input[type="checkbox"]:checked+label:before {
+                    background-image: url('images/check.svg');
+                    border-color: $color_holding_primary_default;
+                }
+            }
+        }
+    } 
+}
+
+/* Element: table1 =========*/
+/* Element: table2 =========*/
+.table-containter {
+    width: 100%;
+}
+.table-header {
+    height: 47px;
+    background-color: #2e2e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--item {
+        line-height: 1.5;
+        text-align: center;
+        color: #fff;
+    }
+}
+.table-body {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+.table-row {
+    display: flex;
+    align-items: center;
+    background-color: #fff; 
+    border-bottom: 1px solid #c8c8c8;
+    &:hover {
+        background-color: #e4d8be;
+    }
+    &--item {
+        line-height: 1.5;
+        text-align: center;
+        color: #323232; 
+        padding: 12px 0;
+        .table-btn {
+            width: 100%;
+            max-width: 85px;
+            height: 36px;
+            line-height: 36px;
+        }
+    }
+}
+
+$rowHeight: 70px;
+@include rwd($ipad) {
+    .table-containter {
+        width: 100%; 
+        display: flex;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        margin-bottom: 15px;
+    }
+    .table-header {
+        flex-direction: column;
+        height: 100%; 
+        padding: 0 6px;
+        &--item {
+            width: 100px;
+            height: $rowHeight;
+            text-align: left;
+            line-height: 1.5; 
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .table-body {
+        width: 80%;
+        display: flex; 
+        overflow-x: scroll;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+    .table-row { 
+        flex-direction: column;
+        border-right: 1px solid #c1c1c1;
+        padding: 0 15px;
+        &--item {
+            width: 152px;  
+            height: $rowHeight;
+            border-bottom-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .textrow {
+        @include textrow(2, 1.5, 152px)
+    }
+}
+    
+.table-footer { 
+    position: relative;
+}
+@include rwd($ipad) {
+    .table-footer {
+        .table-length {
+            display: none;
+        }
+    }
+}
+.table-length {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center; 
+    &.top {
+        position: static;
+    }
+    &--text {
+        font-size: 15px;
+        color: #818181;
+        line-height: 30px; 
+    }
+    &--select { 
+        select {
+            min-width: 69px;
+            height: 100%;
+            font-size: 18px;
+            color: #818181;
+            line-height: 30px;
+            border: 1px solid $color_holding_primary_default;
+            outline: none;
+            padding: 0 20px 0 10px;
+            background-image: url('images/arrow-g.svg');
+            background-repeat: no-repeat;
+            background-position: 90% 50%;
+            background-size: 17px;
+            background-repeat: no-repeat;
+        }
+    }
+}
+.table-pagination {
+    display: flex;
+    justify-content: center;
+    &--button {
+        width: 100px;
+        line-height: 30px;
+        height: 30px;
+    }
+    &--select {
+        select {
+            min-width: 69px; 
+            font-size: 18px;
+            color: #818181;
+            line-height: 30px;
+            border: 1px solid $color_holding_primary_default;
+            outline: none;
+            padding: 0 20px 0 10px;
+            background-image: url('images/arrow-g.svg');
+            background-repeat: no-repeat;
+            background-position: 90% 50%;
+            background-size: 17px;
+            background-repeat: no-repeat;
+        }
+    }
+    &--info {
+        font-size: 15px;
+        color: #818181; 
+        line-height: 30px; 
+    }
+}
+@include rwd($ipad) {
+    .table-pagination {
+        &--info {
+            font-size: 12px;
+            line-height: 1.25;
+        }
+    }
+}
+/* Element: table2 =========*/

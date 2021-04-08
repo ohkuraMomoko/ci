@@ -1,0 +1,42 @@
+﻿/* @site:  
+ * @author: nikki
+ * @update: nikki  
+ * @page: Layout
+ * @description: 依照目前需要引入樣式檔，為專案主要樣式檔案
+ * @compiler: visual code(live sass compiler)
+ */
+
+/* plugin */
+@import "vendor/_slick.scss";
+@import "vendor/_slick-theme.scss";
+@import "vendor/_animate.scss";
+// // @import "plugin/_noty.scss";  
+// @import "plugin/aos/aos.scss";
+// //@import "plugin/_textoverflow.scss";
+
+/* setting */ 
+@import "setting/_variables.scss";
+@import "setting/_reset.scss"; 
+@import "setting/_mixins.scss"; 
+@import "setting/_extend.scss"; 
+
+/* components */ 
+@import "components/_button.scss";      
+@import "components/_icon.scss"; 
+/*依照所需的類型引入menu*/
+@import "components/_menu01.scss";   
+@import "components/_menu02.scss";  
+@import "components/_menu03.scss";  
+
+@import "components/_footer.scss";      
+@import "components/_form.scss";
+@import "components/_breadcrumb.scss";
+@import "components/_pagination.scss";
+@import "components/_tab.scss";
+@import "components/_faq.scss";
+@import "components/_message.scss";
+@import "components/_loader.scss";
+@import "components/_collapse.scss";
+@import "components/_dropdown.scss";
+@import "components/_table.scss";
+@import "components/_modal.scss";

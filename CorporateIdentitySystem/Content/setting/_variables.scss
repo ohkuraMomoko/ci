@@ -1,0 +1,136 @@
+﻿/* =Variables--------------------------*/
+
+/* font style ===========*/
+$font-tw: 'Noto Sans TC', '微軟正黑體', Helvetica, Arial, '黑體-繁', 'Heiti TC', '儷黑', 'LiHei', 'Microsoft JhengHei', sans-serif;
+
+/* desktop & mobile size ===========*/
+$min-w: 1140px;
+$max-w: 1920px;
+$max-mac: 2560px;
+$content-w: 1120px;
+$ipad-pro: 1024px;
+$ipad: 768px;
+$i6: 375px;
+$i5: 320px;
+$i6p: 414px;
+$mobile-size: 480px;
+$template-w: 1440px;
+
+/* color ===========*/
+/* name rule: color_name_class主色(輔色)_status */
+/* type: 控股集團角色 ---*/
+$color_holding_primary_default: #b99516;
+$color_holding_primary_hover: #c7ab44;
+$color_holding_primary_active: #d5c073;
+$color_holding_primary_disabled: rgba(130, 130, 130, 0.5);
+
+$color_holding_secondary_default: #4a4a4a;
+$color_holding_secondary_hover: #6f6f6f;
+$color_holding_secondary_active: #939393;
+$color_holding_secondary_disabled: rgba(130, 130, 130, 0.5);
+
+$color_holding_tertiary_default: #fff;
+$color_holding_tertiary_hover: #eadfb8;
+$color_holding_tertiary_active: #dcca8a;
+$color_holding_tertiary_disabled: #fff;
+
+$color_holding_ghost_default: #fff;
+$color_holding_ghost_hover:  #eadfb8;
+$color_holding_ghost_active: #dcca8a;
+$color_holding_ghost_disabled: #fff;
+
+$color_holding_danger_default: #d7371e;
+$color_holding_danger_hover: #bb3b27;
+$color_holding_danger_active: #ad3d2b;
+
+/* type: 企業融資服務 ---*/
+$color_enterprise_primary_default: #366579;
+$color_enterprise_primary_hover: #849ea9;
+$color_enterprise_primary_active: #a3b6bf;
+$color_enterprise_primary_disabled: rgba(130, 130, 130, 0.5);
+
+$color_enterprise_secondary_default: #4a4a4a;
+$color_enterprise_secondary_hover:  #6f6f6f;
+$color_enterprise_secondary_active:  #939393;
+$color_enterprise_secondary_disabled: rgba(130, 130, 130, 0.5);
+
+$color_enterprise_tertiary_default: #fff;
+$color_enterprise_tertiary_hover: #d0dade;
+$color_enterprise_tertiary_active: #b2c2c9;
+$color_enterprise_tertiary_disabled: #fff;
+
+$color_enterprise_ghost_default: #fff;
+$color_enterprise_ghost_hover: #d0dade;
+$color_enterprise_ghost_active: #b2c2c9;
+$color_enterprise_ghost_disabled: #fff;
+
+$color_enterprise_danger_default: #d7371e;
+$color_enterprise_danger_hover: #bb3b27;
+$color_enterprise_danger_active: #ad3d2b;
+
+/* type: 車輛融資服務 ---*/
+$color_vehicle_primary_default: #679482;
+$color_vehicle_primary_hover: #86aa9b;
+$color_vehicle_primary_active: #a4bfb4;
+$color_vehicle_primary_disabled: rgba(130, 130, 130, 0.5);
+
+$color_vehicle_secondary_default: #4a4a4a;
+$color_vehicle_secondary_hover: #6f6f6f;
+$color_vehicle_secondary_active: #939393;
+$color_vehicle_secondary_disabled: rgba(130, 130, 130, 0.5);
+
+$color_vehicle_tertiary_default: #fff;
+$color_vehicle_tertiary_hover: #d1ded9;
+$color_vehicle_tertiary_active: #b3c9c0;
+$color_vehicle_tertiary_disabled: #fff;
+
+$color_vehicle_ghost_default: #fff;
+$color_vehicle_ghost_hover:  #d1ded9;
+$color_vehicle_ghost_active: #b3c9c0;
+$color_vehicle_ghost_disabled: #fff;
+
+$color_vehicle_danger_default: #d7371e;
+$color_vehicle_danger_hover: #bb3b27;
+$color_vehicle_danger_active: #ad3d2b;
+
+/* type: 個人融資服務 ---*/
+$color_persolal_primary_default: #fa6a7b;
+$color_persolal_primary_hover: #fb8896;
+$color_persolal_primary_active: #fca6b0;
+$color_persolal_primary_disabled: rgba(130, 130, 130, 0.5);
+
+$color_persolal_secondary_default: #4a4a4a;
+$color_persolal_secondary_hover: #6f6f6f;
+$color_persolal_secondary_active: #939393;
+$color_persolal_secondary_disabled: rgba(130, 130, 130, 0.5);
+
+$color_persolal_tertiary_default: #fff;
+$color_persolal_tertiary_hover: #fdd2d7;
+$color_persolal_tertiary_active: #fcb4bd;
+$color_persolal_tertiary_disabled: #fff;
+
+$color_persolal_ghost_default: #fff;
+$color_persolal_ghost_hover: #fdd2d7;
+$color_persolal_ghost_active: #fcb4bd;
+$color_persolal_ghost_disabled: #fff;
+
+$color_persolal_danger_default: #d7371e;
+$color_persolal_danger_hover: #bb3b27;
+$color_persolal_danger_active: #ad3d2b;
+
+
+
+$colorText: #4d4d4d;
+$colorText2: #7B7B7B;
+$colorText3: #959595;
+$colorText4: #A0A0A0;
+$colorText5: #D8D8D8;
+$colorText6: #ECECEC;
+$colorText7: #F5F5F5;
+$colorError: #F16F63;
+
+/*animation ===========*/
+$cb: cubic-bezier(.215, .61, .355, 1);
+$cb2: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+$desktopMenuWidth: 260px;

@@ -1,0 +1,133 @@
+﻿@{ Layout = null; }
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tab2_Demo</title>
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/jquery") 
+    @Styles.Render("~/Content/css")
+</head>
+
+<body>
+    <div class="faq-container">
+        <div class="section-content">
+            <div class="category-select">
+                <!-- TODO: .categorySelect 內的option必須從0開始，不得跳號 -->
+                <select name="categorySelect" id="categorySelect">
+                    <option value="0">汽車貸款</option>
+                    <option value="1">機車貸款</option>
+                    <option value="2">遊覽車/貨車貸款</option>
+                </select>
+            </div>
+            <!-- TODO: .categoryNav 內的data-target必須從0開始，不得跳號 -->
+            <div id="categoryNav" class="tab">
+                <div class="tab--item active" data-target="0">汽車貸款</div>
+                <div class="tab--item" data-target="1">機車貸款</div>
+                <div class="tab--item" data-target="2">遊覽車/貨車貸款</div>
+            </div>
+            <div id="categorySlider" class="tab-box">
+                <div class="page-item">
+                    <div class="faq-accordion" id="accordion1">
+                        <div class="faq-item">
+                            <button class="faq-item--btn" data-toggle="collapse" data-target="#q11"
+                                aria-expanded="false" aria-controls="q11">
+                                Q.汽車貸款有哪些類型可供申請？
+                            </button>
+                            <div id="q11" class="collapse" data-parent="#accordion1">
+                                <div class="faq-item--content">
+                                    A.本公司目前辦理之汽車貸款項目主要分為二大類：<br />1.
+                                    原車融資分期付款。<br />2.
+                                    中古車買賣分期付款。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-item--btn" data-toggle="collapse" data-target="#q12"
+                                aria-expanded="false" aria-controls="q12">
+                                Q.哪些類型的車輛可申請汽車貸款？
+                            </button>
+                            <div id="q12" class="collapse" data-parent="#accordion1">
+                                <div class="faq-item--content">
+                                    A.3.5噸以下的客貨車皆可申請。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-item--btn" data-toggle="collapse" data-target="#q13"
+                                aria-expanded="false" aria-controls="q13">
+                                Q.申請人需要什麼條件?是否需要提供保證人?
+                            </button>
+                            <div id="q13" class="collapse" data-parent="#accordion1">
+                                <div class="faq-item--content">
+                                    A.1.
+                                    年滿20-60歲個人或公司戶，皆可申請。<br />2.
+                                    是否徵提保證人視客戶條件而定。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-item">
+                    <div class="faq-accordion" id="accordion2">
+                        <div class="faq-item">
+                            <button class="faq-item--btn" data-toggle="collapse" data-target="#q21"
+                                aria-expanded="false" aria-controls="q21">
+                                Q.申辦中租輪你貸的條件為何?
+                            </button>
+                            <div id="q21" class="collapse" data-parent="#accordion2">
+                                <div class="faq-item--content">
+                                    A.只要符合以下資格就可線上申辦<br />1.中華民國國民<br />2.年滿20
+                                    ~70歲<br />3.自有機車(公司車需先過戶為個人)<br />4.100cc最高可申請10萬元、200cc最高可申請14萬元
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-item">
+                    <div class="faq-accordion" id="accordion3">
+                        <div class="faq-item">
+                            <button class="faq-item--btn" data-toggle="collapse" data-target="#q31"
+                                aria-expanded="false" aria-controls="q31">
+                                Q.哪些車種可以申請貸款？
+                            </button>
+                            <div id="q31" class="collapse" data-parent="#accordion3">
+                                <div class="faq-item--content">
+                                    A.3.49噸(含)以上車輛皆可辦理，如：遊覽車、小貨車(發財車)、大貨車(含篷式、平板、鷗翼、框式、廂式)
+                                    、砂石車、預拌車、曳引車、吊車、拖板車(含全拖1+1、半拖)等車輛。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/slick.min.js"></script>
+    <script>
+    $(function(){
+        $("#categorySlider").slick({
+            slidesToShow: 1,
+            sliderToScroll: 1,
+            arrows: false,
+            dots: false,
+            fade: true,
+            swipe: false,
+        });
+        $("#categoryNav .tab--item").click(function(){
+            $("#categoryNav .tab--item").removeClass("active");
+            $(this).addClass("active");
+            $("#categorySlider").slick('slickGoTo', $(this).data("target"));
+        });
+        $("#categoryNav").on('change', function(){
+            $("#categorySlider").slick('slickGoTo', $(this).val());
+        });
+    });
+</script>
+</body>
+
+</html>

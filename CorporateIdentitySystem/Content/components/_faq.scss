@@ -1,0 +1,58 @@
+@import "../setting/_variables.scss";
+@import "../setting/_mixins.scss";
+
+.faq-item {
+    border: 1px solid $color_holding_primary_default;
+    background-color: #fff;
+    margin-right: 2px;
+    margin-bottom: 23px;
+    &--btn {
+        color: $colorText;
+        min-height: 50px;
+        line-height: 1.5;
+        padding: 12px 32px 12px 23px;
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        background-color: #fff;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 2%;
+            top: 0;
+            width: 16px;
+            height: 100%;
+            background-image: url('images/arrow-gold.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 16px;
+            transition: transform $cb 0.3s;
+        }
+        &[aria-expanded="true"] {
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &--content {
+        font-size: 18px;
+        line-height: 1.56;
+        // text-align-last: justify;
+        // text-justify:inter-ideograph;  
+        color: #808080;
+        padding: 0 32px 10px;
+    }
+}
+@include rwd($ipad) {
+    .faq-item {
+        &--btn {
+            padding: 10px 32px 10px 8px;
+        }
+        &--content {
+            padding: 0 32px 10px 8px;
+            font-size: 16px;
+        }
+    }
+}

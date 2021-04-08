@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,SAAS,CACT,gBAAgB,AAAC,CACb,gBAAgB,CC4Fa,OAAO,CD3FvC,AACD,AAAA,SAAS,AAAA,OAAO,CAChB,gBAAgB,AAAA,OAAO,AAAC,CACpB,gBAAgB,CCyFW,OAAO,CDxFrC",
+    "sources": [
+        "areaPersonal.scss",
+        "setting/_variables.scss"
+    ],
+    "names": [],
+    "file": "areaPersonal.min.css"
+}

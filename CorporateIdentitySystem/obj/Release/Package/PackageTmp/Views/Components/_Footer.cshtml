@@ -1,0 +1,83 @@
+﻿
+<footer class="footer">
+    <div class="footer-nav">
+        <div class="footer-nav-container">
+            <div class="footer-nav--info">
+                <p class="title">聯絡客服</p>
+                <p class="info">客服專線：0800-720-168
+                    <br>手機另撥：(02 )2656-2800
+                    <br>週一至週四 10:00-19:00 週五 9:00-18:00</p>
+            </div>
+            <div class="footer-nav--content">
+                <ul class="d-flex justify-content-between list">
+                    <li class="list-item">
+                        <p class="title">公司簡介</p>
+                        <a href="@Url.Content("~/enterprise/about/chaileaseabout")" class="link">中租迪和</a>
+                        <a href="@Url.Content("~/enterprise/about/finatradeabout")" class="link">合迪</a>
+                        <a href="@Url.Content("~/enterprise/about/ezfundabout")" class="link">仲信資融</a>  
+                    </li>
+                    <li class="list-item">
+                        <p class="title">關係企業</p>
+                        <a class="link" href="http://www.chaileaseholding.com/Default.asp" target="_blank">中租控股 </a>
+                        <a class="link" href="https://www.hr5871.chailease.com.tw/" target="_blank">人才招募</a>
+                        <a class="link" href="http://www.chailease.org.tw/" target="_blank">中租青年展望基金會</a>
+                        <a class="link" href="https://www.rentalcar.com.tw/" target="_blank">中租汽車</a>
+                    </li>
+                    <li class="list-item">
+                        <p class="title">相關連結</p>
+                        <a href="https://customernt.chailease.com.tw/Form/Portal_Login.aspx?ReturnUrl=%2f" class="link" target="_blank">供應商查詢</a>
+                        <a href="https://www.chailease.com.tw/0Card/" class="link" target="_blank">零卡分期</a>
+                        <a href="https://www.finmart.com.tw/" class="link" target="_blank">全民電廠</a>
+                        <a href="http://www.5871.com.tw/CloudUE" class="link" target="_blank">5871設備網</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="footer-copyright--left">
+            <img src="@Url.Content("~/Content/images/logo-white.svg")" alt="中租迪和股份有限公司Chailease Finance Co" class="logo">
+        </div>
+        <div class="footer-copyright--right">
+            <a href="@Url.Content("~/enterprise/about/privacy")" class="privite"> 隱私權保護政策 </a>
+            <p class="copyright-text">建議瀏覽器版本：IE11 或 Chrome 50 或 Firefox 52 以上</p>
+            <p class="copyright-text">&copy; @DateTime.Now.Year 中租迪和股份有限公司Chailease Finance Co., Ltd. All Right Reserved.</p>
+        </div>
+    </div>
+</footer>
+<div class="footer-mobile">
+    <img src="@Url.Content("~/Content/images/logo-white.svg")" alt="中租迪和股份有限公司Chailease Finance Co" class="logo">
+    <p class="info">客服專線：0800-720-168
+    <br>手機另撥：(02 )2656-2800
+    <br>週一至週四 10:00-19:00 週五 9:00-18:00</p>  
+    <div class="accordion" id="accordionFooter">
+        <div class="accrdion-item">
+            <div class="accrdion-item--btn" data-toggle="collapse" data-target="#collapse1" aria-controls="collapse1"> 公司簡介</div>
+            <div id="collapse1" class="accrdion-item--content collapse" data-parent="#accordionFooter">
+                <a href="@Url.Content("~/enterprise/about/chaileaseabout")" class="link">中租迪和</a>
+                <a href="@Url.Content("~/enterprise/about/finatradeabout")" class="link">合迪</a>
+                <a href="@Url.Content("~/enterprise/about/ezfundabout")" class="link">仲信資融</a>  
+            </div>
+        </div>
+        <div class="accrdion-item">
+            <div class="accrdion-item--btn" data-toggle="collapse" data-target="#collapse2" aria-controls="collapse2">關係企業</div>
+            <div id="collapse2" class="accrdion-item--content collapse" data-parent="#accordionFooter">
+                <a class="link" href="http://www.chaileaseholding.com/Default.asp" target="_blank">中租控股 </a>
+                <a class="link" href="https://www.hr5871.chailease.com.tw/" target="_blank">人才招募</a>
+                <a class="link" href="http://www.chailease.org.tw/" target="_blank">中租青年展望基金會</a>
+                <a class="link" href="https://www.rentalcar.com.tw/" target="_blank">中租汽車</a>
+            </div>
+        </div>
+        <div class="accrdion-item">
+            <div class="accrdion-item--btn" data-toggle="collapse" data-target="#collapse3" aria-controls="collapse3">相關連結</div>
+            <div id="collapse3" class="accrdion-item--content collapse" data-parent="#accordionFooter">
+                <a href="https://customernt.chailease.com.tw/Form/Portal_Login.aspx?ReturnUrl=%2f" class="link" target="_blank">供應商查詢</a>
+                <a href="https://www.chailease.com.tw/0Card/" class="link" target="_blank">零卡分期</a>
+                <a href="https://www.finmart.com.tw/" class="link" target="_blank">全民電廠</a>
+                <a href="http://www.5871.com.tw/CloudUE" class="link" target="_blank">5871設備網</a>
+            </div>
+        </div>
+    </div>
+    <a href="@Url.Content("~/enterprise/about/privacy")" class="privite"> 隱私權保護政策</a>
+    <p class="copyright">&copy; @DateTime.Now.Year 中租迪和股份有限公司Chailease Finance Co., Ltd. All Right Reserved.</p>
+</div>

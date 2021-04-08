@@ -1,0 +1,209 @@
+@import "../setting/_variables.scss";
+@import "../setting/_mixins.scss";
+/*=btn--------------------------------*/
+a[class^="btn"] {
+	display: block;
+}
+
+/* btn--type --- */
+%btn {
+	width: 155px;
+	height: 50px;
+	font-size: 1rem;
+	text-align: center;
+	line-height: 50px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: transparent;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: color 0.55s cubic-bezier(0.52, 0.08, 0.18, 1);
+	> span {
+		position: relative;
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 120%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform-origin: right top;
+		transform: translateX(-101%) skewX(-17.62deg);
+		-webkit-transition: -webkit-transform 0.55s
+			cubic-bezier(0.52, 0.08, 0.18, 1);
+		transition: -webkit-transform 0.55s cubic-bezier(0.52, 0.08, 0.18, 1);
+		transition: transform 0.55s cubic-bezier(0.52, 0.08, 0.18, 1);
+		transition: transform 0.55s cubic-bezier(0.52, 0.08, 0.18, 1),
+			-webkit-transform 0.55s cubic-bezier(0.52, 0.08, 0.18, 1);
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	&:hover,
+	&:active,
+	&.active,
+	&.hover {
+		&:before {
+			transform: translateX(0) skewX(-17.62deg);
+			transform-origin: left top;
+		}
+	}
+	&.disable {
+		cursor: not-allowed;
+	}
+}
+
+@mixin btnCreate($name, $class, $color_default, $color_hover, $color_active, $color_disable: #fff, $colorText: #000) {
+	.btn-#{$name}{
+		&-#{$class} {
+			@extend %btn;
+			
+			@if ($class == 'tertiary') {
+				color: $colorText;
+				border-color: $colorText;
+			} @else if ($class == 'ghost') {
+				color: $colorText;
+				border-color: transparent;
+			}@else {
+				color: #fff;
+				border-color: transparent;
+			}
+			background-color: $color_default;
+			&:hover {
+				color: #fff;
+				&:before {
+					background-color: $color_hover;
+				}
+			}
+			&.hover {
+				color: #fff;
+				background-color: $color_hover;
+				@if ($class == 'tertiary') {
+					border-color: $colorText;
+				}
+				&:before {
+					background-color: $color_hover;
+				}
+			}
+			&:active,
+			&.active {
+				@if ($class == 'tertiary') {
+					color: $colorText;
+					border-color: $colorText;
+				} @else if ($class == 'ghost') {
+					color: $colorText;
+					border-color: transparent;
+				}@else {
+					color: #fff;
+					border-color: transparent;
+				}
+				background-color: $color_active;
+				&:before {
+					background-color: $color_active;
+				}
+			}
+			&:disabled,
+			&.disabled {
+				color: #9b9b9b;
+				background-color: $color_disable;
+				@if ($class == 'tertiary') {
+					border-color: #939393;
+				} @else {
+					border-color: transparent;
+				}
+				
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+$btnNames: 'holding', 'enterprise', 'vehicle', 'persolal';
+$btnClass: 'primary', 'secondary', 'tertiary', 'ghost', 'danger';
+@include btnCreate('holding', 'primary', $color_holding_primary_default, $color_holding_primary_hover, $color_holding_primary_active, $color_holding_primary_disabled);
+@include btnCreate('holding', 'secondary', $color_holding_secondary_default, $color_holding_secondary_hover, $color_holding_secondary_active, $color_holding_secondary_disabled);
+@include btnCreate('holding', 'tertiary', $color_holding_tertiary_default, $color_holding_tertiary_hover, $color_holding_tertiary_active, $color_holding_tertiary_disabled, $color_holding_primary_default);
+@include btnCreate('holding', 'ghost', $color_holding_ghost_default, $color_holding_ghost_hover, $color_holding_ghost_active, $color_holding_ghost_disabled, $color_holding_primary_default);
+@include btnCreate('holding', 'danger', $color_holding_danger_default, $color_holding_danger_hover, $color_holding_danger_active);
+
+@include btnCreate('enterprise', 'primary', $color_enterprise_primary_default, $color_enterprise_primary_hover, $color_enterprise_primary_active, $color_enterprise_primary_disabled);
+@include btnCreate('enterprise', 'secondary', $color_enterprise_secondary_default, $color_enterprise_secondary_hover, $color_enterprise_secondary_active, $color_enterprise_secondary_disabled);
+@include btnCreate('enterprise', 'tertiary', $color_enterprise_tertiary_default, $color_enterprise_tertiary_hover, $color_enterprise_tertiary_active, $color_enterprise_tertiary_disabled, $color_enterprise_primary_default);
+@include btnCreate('enterprise', 'ghost', $color_enterprise_ghost_default, $color_enterprise_ghost_hover, $color_enterprise_ghost_active, $color_enterprise_ghost_disabled, $color_enterprise_primary_default);
+@include btnCreate('enterprise', 'danger', $color_enterprise_danger_default, $color_enterprise_danger_hover, $color_enterprise_danger_active);
+
+@include btnCreate('vehicle', 'primary', $color_vehicle_primary_default, $color_vehicle_primary_hover, $color_vehicle_primary_active, $color_vehicle_primary_disabled);
+@include btnCreate('vehicle', 'secondary', $color_vehicle_secondary_default, $color_vehicle_secondary_hover, $color_vehicle_secondary_active, $color_vehicle_secondary_disabled);
+@include btnCreate('vehicle', 'tertiary', $color_vehicle_tertiary_default, $color_vehicle_tertiary_hover, $color_vehicle_tertiary_active, $color_vehicle_tertiary_disabled, $color_vehicle_primary_default);
+@include btnCreate('vehicle', 'ghost', $color_vehicle_ghost_default, $color_vehicle_ghost_hover, $color_vehicle_ghost_active, $color_vehicle_ghost_disabled, $color_vehicle_primary_default);
+@include btnCreate('vehicle', 'danger', $color_vehicle_danger_default, $color_vehicle_danger_hover, $color_vehicle_danger_active);
+
+@include btnCreate('persolal', 'primary', $color_persolal_primary_default, $color_persolal_primary_hover, $color_persolal_primary_active, $color_persolal_primary_disabled);
+@include btnCreate('persolal', 'secondary', $color_persolal_secondary_default, $color_persolal_secondary_hover, $color_persolal_secondary_active, $color_persolal_secondary_disabled);
+@include btnCreate('persolal', 'tertiary', $color_persolal_tertiary_default, $color_persolal_tertiary_hover, $color_persolal_tertiary_active, $color_persolal_tertiary_disabled, $color_persolal_primary_default);
+@include btnCreate('persolal', 'ghost', $color_persolal_ghost_default, $color_persolal_ghost_hover, $color_persolal_ghost_active, $color_persolal_ghost_disabled, $color_persolal_primary_default);
+@include btnCreate('persolal', 'danger', $color_persolal_danger_default, $color_persolal_danger_hover, $color_persolal_danger_active);
+
+/*=btn--------------------------------*/
+/*=btn-circle ------------------------*/
+[class^="btn-circle-type"] {
+	width: 56px;
+	height: 56px;
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: background-imgaes linear 0.3s;
+}
+$btnCircles01: 'plus', 'more', 'return', 'search', 'twitter', 'fb', 'ins', 'youtube';
+$btnCircles02: 'plus', 'more', 'return', 'subtract', 'delete', 'twitter', 'fb', 'ins', 'youtube';
+
+@each $btn in $btnCircles01 {
+	.btn-circle-type01--#{$btn} {
+		transition: background-image linear 0.3s;
+		background-image: url('images/buttons/btn-circle-type01-#{$btn}-default.svg');
+		&:hover,
+		&.hover {
+			background-image: url('images/buttons/btn-circle-type01-#{$btn}-hover.svg');
+		}
+		&:active,
+		&.active {
+			background-image: url('images/buttons/btn-circle-type01-#{$btn}-active.svg');
+		}
+	}
+}
+@each $btn in $btnCircles02 {
+	.btn-circle-type02--#{$btn} {
+		transition: background-image linear 0.3s;
+		background-image: url('images/buttons/btn-circle-type02-#{$btn}-default.svg');
+		&:hover,
+		&.hover {
+			background-image: url('images/buttons/btn-circle-type02-#{$btn}-hover.svg');
+		}
+		&:active,
+		&.active {
+			background-image: url('images/buttons/btn-circle-type02-#{$btn}-active.svg');
+		}
+	}
+}
+
+[class^="btn-circle-other"] {
+	width: 44px;
+	height: 44px;
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: background-imgaes linear 0.3s;
+}
+$btnOthers: 'close', 'search', 'menu', 'earth', 'prev-1', 'next-1', 'prev-2', 'next-2', 'prev-3', 'next-3';
+@each $btn in $btnOthers {
+	.btn-circle-other--#{$btn} {
+		background-image: url('images/buttons/btn-circle-other-#{$btn}.svg');
+	}
+}
+/*=btn-circle ------------------------*/

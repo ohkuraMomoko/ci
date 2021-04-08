@@ -1,0 +1,142 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Header_Demo1</title>
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="top-bar">
+        <header id="headerEnterprise" class="header--type03">
+            <a href="@Url.Content("~/enterprise/home/index")" class="header-link" >
+                <img src="@Url.Content("~/Content/images/logo-white.svg")" alt="中租迪和 Chailease Finance">
+            </a>
+            <ul class="header-nav">
+                <li class="header-nav--item js-desk-menu">
+                    <a href="#">關於中租</a>
+                </li>
+                <li class="header-nav--item js-desk-menu">
+                    <a href="#">公司治理</a>
+                </li>
+                <li class="header-nav--item js-desk-menu">
+                    <a href="#">企業社會責任</a>
+                </li>
+                <li class="header-nav--item js-desk-menu">
+                    <a href="#">投資人專區</a>
+                </li>
+                <div class="earth-btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="@Url.Content("~/en-US/home/index")">ENGLISH</a>
+                    <a class="dropdown-item" href="@Url.Content("~/id-ID/home/index")">INDONESIA</a>
+                </div>
+            </ul>
+            <div id="burger" class="burger" data-toggle="modal" data-target="#mobileMenuModal"></div>
+            <a href="#" class="header-link-mob" >
+                <img src="@Url.Content("~/Content/images/icon-logo-mobile.svg")" alt="PT Chailease Indonesia Finance">
+            </a>
+        </header>
+        <div id="subMenuDesktop" class="submenu">
+            <div class="submenu-containter">
+                <div class="submenu--item">
+                    <a href="#">關於中租1</a>
+                    <a href="#">關於中租2</a>
+                </div>
+                <div class="submenu--item">
+                    <a href="#">公司治理</a>
+                    <a href="#">公司治理</a>
+                    <a href="#">公司治理</a>
+                    <a href="#">公司治理</a>
+                </div>
+                <div class="submenu--item">
+                    <a href="#">企業社會責任</a>
+                </div>
+                <div class="submenu--item">
+                    <a href="#">投資人專區</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="mobileMenuModal" tabindex="-1" role="dialog" aria-labelledby="mobileMenuModalLabel" aria-hidden="true">
+        <div class="modal-dialog has-menu" role="document">
+            <div class="modal-content">
+                <div class="mobile-menu">
+                    <p class="mobile-menu--title">MENU</p>
+                    <div class="mobile-menu--close" data-dismiss="modal" aria-label="Close"></div>
+                    <div id="mobCollapse" class="mobile-menu--containter">
+                        <div class="accrdion-item">
+                            <a class="accrdion-item--btn not-col" href="#" target="_blank">公司簡介</a>
+                        </div>
+                        <div class="accrdion-item">
+                            <div class="accrdion-item--btn" data-toggle="collapse" data-target="#mobCol1" aria-controls="mobCol1"> 公司簡介</div>
+                            <div id="mobCol1" class="accrdion-item--content collapse" data-parent="#mobCollapse">
+                                <a href="@Url.Content("~/enterprise/about/chaileaseabout")" class="link">中租迪和</a>
+                                <a href="@Url.Content("~/enterprise/about/finatradeabout")" class="link">合迪</a>
+                                <a href="@Url.Content("~/enterprise/about/ezfundabout")" class="link">仲信資融</a>  
+                            </div>
+                        </div>
+                        <div class="accrdion-item">
+                            <div class="accrdion-item--btn" data-toggle="collapse" data-target="#mobCol2" aria-controls="mobCol2">關係企業</div>
+                            <div id="mobCol2" class="accrdion-item--content collapse" data-parent="#mobCollapse">
+                                <a class="link" href="http://www.chaileaseholding.com/Default.asp" target="_blank">中租控股 </a>
+                                <a class="link" href="https://www.hr5871.chailease.com.tw/" target="_blank">人才招募</a>
+                                <a class="link" href="http://www.chailease.org.tw/" target="_blank">中租青年展望基金會</a>
+                                <a class="link" href="https://www.rentalcar.com.tw/" target="_blank">中租汽車</a>
+                            </div>
+                        </div>
+                        <div class="accrdion-item">
+                            <div class="accrdion-item--btn" data-toggle="collapse" data-target="#mobCol3" aria-controls="mobCol3">相關連結</div>
+                            <div id="mobCol3" class="accrdion-item--content collapse" data-parent="#mobCollapse">
+                                <a href="https://customernt.chailease.com.tw/Form/Portal_Login.aspx?ReturnUrl=%2f" class="link" target="_blank">供應商查詢</a>
+                                <a href="https://www.chailease.com.tw/0Card/" class="link" target="_blank">零卡分期</a>
+                                <a href="https://www.finmart.com.tw/" class="link" target="_blank">全民電廠</a>
+                                <a href="http://www.5871.com.tw/CloudUE" class="link" target="_blank">5871設備網</a>
+                            </div>
+                        </div>
+                        <div class="accrdion-item accrdion-item--language">
+                            <div class="accrdion-item--btn" data-toggle="collapse" data-target="#mobCol6" aria-controls="mobCol6">
+                                <img src="@Url.Content("~/Content/images/img-language.svg")" alt="Language" class="icon">ENGLISH</div>
+                            <div id="mobCol6" class="accrdion-item--content collapse" data-parent="#mobCollapse">
+                                <a href="@Url.Content("~/id-ID/home")" class="link">INDONESIA</a>
+                                <a href="@Url.Content("~/en-US/home")" class="link">ENGLISH</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            var timer;
+            $('#subMenuDesktop').fadeOut();
+            $(".js-desk-menu").mouseenter(function(){
+                $('#subMenuDesktop').fadeIn();
+            })
+
+            $(".js-desk-menu").mouseleave(function(){
+                timer = setTimeout(function(){
+                    $('#subMenuDesktop').fadeOut();
+                }, 2000);
+            })
+
+            $("#subMenuDesktop").hover(
+                function(){
+                    clearTimeout(timer);
+                }, function(){
+                    $('#subMenuDesktop').fadeOut();
+                }
+            );
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+.accordion {
+    width: 286px;
+}
+.accordion-item {
+    &--header {
+        font-size: 12px;
+        border-top: .5px solid #ececec;
+        border-bottom: .5px solid #ececec;
+        padding: 10px 8px;
+        transition: background-color linear 0.3s;
+        position: relative;
+        cursor: pointer;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 8px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-image: url('images/arrow-g.svg');
+            background-position: 50% 50%;
+            background-size: 100%;
+        }
+        &:hover {
+            background-color: #e4d8be;
+        }
+        &[aria-expanded="true"]{
+            color: #ffffff;
+            background-color: $color_holding_primary_default;
+            &:after {
+                background-image: url('images/arrow-white-up.svg');
+            }
+        }
+    }
+    .collapse {
+        font-size: 10px;
+        padding: 5px 8px 50px 8px;
+        background-color: #e4d8be;
+    }
+}
+.accordion {
+    &--type1 {
+        .accordion-item--header:after {
+            right: 8px;
+        }
+    }
+    &--type2 {
+        .accordion-item--header {
+            padding-left: 28px;
+            &:after {
+                left: 8px;
+            }
+        }
+    }
+}

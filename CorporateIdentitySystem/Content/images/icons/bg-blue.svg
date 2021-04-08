@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="240" viewBox="0 0 240 240">
+    <defs>
+        <linearGradient id="o7ymat8txc" x1="-1.815%" x2="49.776%" y1="22.262%" y2="58.333%">
+            <stop offset="0%" stop-color="#7299AC" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#7299AC"/>
+        </linearGradient>
+        <linearGradient id="qryduhn0rd" x1="53.579%" x2="23.024%" y1="60.403%" y2="21.194%">
+            <stop offset="0%" stop-color="#7299AC" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#7299AC"/>
+        </linearGradient>
+        <path id="2ouwe5h7ra" d="M0 0H239.36V239.36H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-890 -413) translate(890 413)">
+                    <mask id="3puj4w1rxb" fill="#fff">
+                        <use xlink:href="#2ouwe5h7ra"/>
+                    </mask>
+                    <use fill="#FFF" opacity=".012" xlink:href="#2ouwe5h7ra"/>
+                    <g fill-rule="nonzero" mask="url(#3puj4w1rxb)">
+                        <g>
+                            <path fill="url(#o7ymat8txc)" d="M95.673 23.919c52.842 0 95.676 42.84 95.676 95.673h47.838C239.187 53.543 185.64 0 119.592 0 53.543 0 0 53.543 0 119.592c0-52.84 42.84-95.673 95.673-95.673z" transform="translate(0 1.36)"/>
+                            <path fill="url(#qryduhn0rd)" d="M119.592 191.349c-39.627 0-71.74-32.127-71.74-71.74 0-39.614 32.126-71.74 71.74-71.74 39.613 0 71.74 32.126 71.74 71.74 0-52.84-42.84-95.673-95.676-95.673S0 66.752 0 119.592c0 66.048 53.543 119.595 119.592 119.595h250.053v-47.838H119.592z" transform="translate(0 1.36)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

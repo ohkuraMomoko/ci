@@ -1,0 +1,77 @@
+﻿@{
+    var autoPieceUrl = System.Configuration.ConfigurationManager.AppSettings["testMode"] == "Y" ? "https://uatautopiece.chailease.com.tw" : "https://autopiece.chailease.com.tw";
+}
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close"  data-dismiss="modal" aria-label="Close"></div>
+            <div id="nbsModal" class="modal-body" style="height: 500px; overflow-y: scroll;">
+                <p class="modal-title">車輛資金申請</p>
+                <iframe id="autopieceIframe" src="@autoPieceUrl?web_id=web_carloan_contactus2_tw&language=zh-TW" 
+                    width="100%" scrolling="no" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="@Url.Content("~/Scripts/iframeResizer.min.js")"></script>
+    <script type="text/javascript">
+    // $( window ).resize(function() {
+    //     location.reload();
+    // });
+    var minHeight = 1432;
+    $('#exampleModalCenter').on('shown.bs.modal', function (e) {
+        console.log("aa");
+        iFrameResize({
+            log: true, // Enable console logging
+            inPageLinks: true,
+            autoResize: true,
+            minHeight: minHeight,
+            targetOrigin: '@autoPieceUrl',
+            onInit: function () {
+                //document
+                //    .getElementsByTagName('iframe')[0]
+                //    .iFrameResizer.sendMessage(JSON.stringify(json))
+                document
+                    .getElementById("autopieceIframe")
+                    .iFrameResizer.sendMessage("parent finish.")
+            },
+            onResized: function (messageData) {
+                // Callback fn when resize is received
+                console.log(
+                    'Frame ID:' +
+                    messageData.iframe.id +
+                    ',Height:' +
+                    messageData.height +
+                    ',Width:' +
+                    messageData.width +
+                    ',Event type:' +
+                    messageData.type
+                )
+            },
+            onMessage: function (messageData) {
+                // Callback fn when message is received
+                console.log(
+                    'Frame ID:' +
+                    messageData.iframe.id +
+                    ',Message:' +
+                    messageData.message
+                )
+                console.log(messageData.message);
+                document
+                    .getElementsByTagName('iframe')[0]
+                    .iFrameResizer.sendMessage('parent!test')
+
+                $('#nbsModal').scrollTop(minHeight);
+            },
+            onClosed: function (id) {
+                // Callback fn when iFrame is closed
+                console.log(
+                    'IFrame (' + id + ') removed from page.'
+                )
+            }
+        })
+    })
+
+        
+    </script>

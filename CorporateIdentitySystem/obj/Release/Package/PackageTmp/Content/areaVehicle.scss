@@ -1,0 +1,41 @@
+@import "setting/_variables.scss";
+@import "setting/_mixins.scss";
+/* 車輛融資--各別設定檔 */
+.nav-join,
+.header-join-btn {
+    background-color: $color_vehicle_primary_default;
+}
+.nav-join:before,
+.header-join-btn:before {
+    background-color: $color_vehicle_primary_hover; 
+}
+.modal-dialog {
+    max-width: 862px;
+}
+.modal-content {
+    border: solid 4px #b99515;
+    padding: 64px 23px 5px;
+    .modal-title {
+        color: #547a6b;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .modal-close {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        background-image: url('images/icon-close-popup.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 26px;
+        z-index: 2;
+    }
+}
+@include rwd($ipad) {
+    .modal-content {
+        padding: 0;
+    }
+}

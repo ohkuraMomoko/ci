@@ -1,0 +1,10 @@
+@import "setting/_variables.scss";
+/* 個人服務--各別設定檔 */
+.nav-join,
+.header-join-btn {
+    background-color: $color_persolal_primary_default;
+}
+.nav-join:before,
+.header-join-btn:before {
+    background-color: $color_persolal_primary_hover; 
+}

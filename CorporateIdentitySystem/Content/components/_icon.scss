@@ -1,0 +1,17 @@
+@import "../setting/_variables.scss";
+@import "../setting/_mixins.scss";
+
+[class^='icon-'] {
+    width: 20px;
+    height: 20px;
+}
+@for $i from 1 through 9 {
+    .icon-0#{$i} {
+        background-image: url('images/icons/icon-0#{$i}.svg');
+    }
+}
+@for $i from 10 through 60 {
+    .icon-#{$i} {
+        background-image: url('images/icons/icon-#{$i}.svg');
+    }
+}
